@@ -472,6 +472,13 @@ ul.menu-items li a {
         padding-right: 15%;
         padding-top: 2.9rem !important;
     }
+
+    .mainest{
+        padding-left: 3%;
+
+        padding-top: 2.9rem !important;
+    }
+  
   
 }
 
@@ -932,4 +939,13 @@ border-radius:  5px !important;
 
 .login:hpver{
     border: solid 2px #56bdfc !important;
+}
+
+a.w3pvt_facebook {
+    font-size: 29px;
+}
+
+
+.move-left{
+    padding-left: 15px;
 }
