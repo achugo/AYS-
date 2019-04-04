@@ -1837,6 +1837,12 @@ a.move-top span:hover {
 .middle{
     top: 113px;
 }
+
+.new-middle{
+   
+        top: 90px;
+
+}
 .information{
     padding-top: 5em !important;
     width: 100%;
@@ -1846,6 +1852,7 @@ a.move-top span:hover {
     width: 402px;
     left: 480px;
 }
+
 
 .boxxx {
     width: 402px;

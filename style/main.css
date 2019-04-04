@@ -933,6 +933,12 @@ border-radius:  5px !important;
     padding-top: 13px;   
 }
 
+.background-color2{
+    background: url(../images/whitebg.png)no-repeat center;
+    height: 550px;
+    border-radius: 50px;
+}
+
 
 .blue-ish{
     margin-right: 0px;
