@@ -128,6 +128,16 @@ ul.menu-items li a {
     bottom:0;
 }
 
+.profile-down{
+    padding-top: 13px;
+}
+
+
+.fa-caret-down{
+color:#169cfd;
+padding-left: 8px;
+}
+
 .sign_up{
     margin-right: 0px;
     background: #169cfd;
@@ -469,7 +479,6 @@ ul.menu-items li a {
 
     .one_hunnid{
         padding-left: 15%;
-        padding-right: 15%;
         padding-top: 2.9rem !important;
     }
 
@@ -756,11 +765,29 @@ border-radius:  5px !important;
 
 .work_history h6{
     border-bottom: 1px solid grey;
-    font-weight:300;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-weight: lighter;
 }
 
 .ratings{
-    margin-top: 5%;
+    margin-top: 15%;
+    font-size: larger;
+    margin-bottom: 10%;
+    font-weight:bold; 
+}
+
+.available{
+    margin-top: 15%;
+    font-size: 18px;
+    margin-bottom: 10%;
+    font-weight:bold; 
+}
+
+.stars-inactive{
+    color: #56bdfc;
+    padding-left: 6px;
 }
 
 .availability{
@@ -772,6 +799,11 @@ border-radius:  5px !important;
     border-bottom: 1px solid grey;
     font-weight:300;
 }
+
+.profile{
+    border-top: 1px solid grey;
+}
+
 
 .edit_availability{
     margin-top: 5%;
@@ -948,4 +980,25 @@ a.w3pvt_facebook {
 
 .move-left{
     padding-left: 15px;
+}
+
+.right{
+    padding-left:5px;
+}
+
+.new-font{
+    font-family: 'montserrat' !important;
+    font-size: 1rem;
+}
+
+.new-button{
+background-color: #fff;
+border-color: #169cfd;
+color: #169cfd;
+}
+
+
+.edit{
+    padding-bottom: 10px;
+
 }
