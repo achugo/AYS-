@@ -161,13 +161,12 @@ padding-left: 8px;
     font-weight: 600;
     text-transform: uppercase;
     font-family: montserrat;
-    weight: 100;
+
 }
 
-.login{
-    color: #ffffff;
-    border: 1px solid #ffffff;
-
+.log-in{
+    color: #169cfd;
+    border: 1px solid #169cfd;
     margin-left: 0.8rem;
     padding: 1px 31px;
     border-radius: 4px;
@@ -479,7 +478,7 @@ padding-left: 8px;
 
     .one_hunnid{
         padding-left: 15%;
-        padding-top: 2.9rem !important;
+        padding-top: 2rem !important;
     }
 
     .mainest{
@@ -927,6 +926,11 @@ border-radius:  5px !important;
     color: #56bdfc;
     font-size: 1.3em;
     padding-top: 20px;
+}
+
+.blu{
+    color: #56bdfc !important;
+    padding-top: 13px;   
 }
 
 
