@@ -779,7 +779,7 @@ border-radius:  5px !important;
 }
 
 .available{
-    margin-top: 15%;
+    margin-top: 10%;
     font-size: 18px;
     margin-bottom: 10%;
     font-weight:bold; 
@@ -800,11 +800,13 @@ border-radius:  5px !important;
     font-weight:300;
 }
 
-.profile{
+.profilelink h6{
     border-top: 1px solid grey;
-    margin-bottom: 7%;
 }
 
+.profile{
+    padding-top: 10px;
+}
 
 .edit_availability{
     margin-top: 5%;
@@ -832,10 +834,10 @@ border-radius:  5px !important;
 .edit_profile_link{
     margin-top: 5%;
     background-color: #f6f6f6;
+    border-color: #169cfd;
     width: 100%;
-    padding:1% 5%;
-    /* box-shadow: none !important;
-    border: none !important; */
+    padding: 1% 5%;
+    font-size: 13px;
 }
 
 .margin0-lr{
@@ -869,11 +871,23 @@ border-radius:  5px !important;
     font-weight:300;
 }
 
+.freelancer0_jd {
+    font-size: 13px;
+} 
+
+.small{
+    font-size: 11px !important; 
+}
+
+.freelancer0_view {
+    padding-top: 5px;
+}
+
 .spoken_language{
     margin-top: 5%;
     background-color: #f6f6f6;
     width: 100%;
-    padding: 5%;
+   
     box-shadow: none !important;
     border: none !important;
 }
