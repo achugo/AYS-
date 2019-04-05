@@ -39,39 +39,31 @@
 
                     <div class="container">
                         <div class="row header-bottom">
-                            <!-- <div class="col-md-2">
-                                <div class="logo_div"><a href="/" class=""></a></div>
-                            </div>
-                            <div class="col-md-10 pull_right">
-                                <ul class="menu-items">
-                                    <li class="nav-item"><a href="#" target="_self" class=""><a href="/about" class="">Ab<img src="https://www.atyourservice.ng/public/app_img/logo.png" alt="logo">out</a></a></li> 
-                                    <li class="nav-item"><a href="#" target="_self" class="">Browse Services <i class="fas fa-angle-down"></i></a></li>
-                                    <li class="nav-item"><a href="#" target="_self" class=""><a href="#" class="react_become">Sign Up</a></a></li>  
-                                    <li id="loginGlobClick" class="nav-item"><a href="#" target="_self" class="">Login</a></li> 
-                                </ul>  
-                             
-                            </div>  -->
-                            <nav class="navbar navbar-expand-md fixed-top navbar-light one_hunnid">
-                                    <a class="navbar-brand pb-2" href="#"><img src="https://www.atyourservice.ng/public/app_img/logo.png" alt="logo"></a>
+                       
+                            <nav class="navbar navbar-expand-md fixed-top navbar-light one_hunnid" id="navAYS">
+                              <div class="container">
+                                  
+                                    <a class="navbar-brand pb-2 go-down" href="#"><img src="https://www.atyourservice.ng/public/app_img/logo.png" alt="logo"></a>
                                     
-                                    <div class="" id="">
-                                      <ul class="navbar-nav ml-auto">
+                                 
+                                      <ul class="navbar-nav " id="auth">
                                         <li class="nav-item active sign_up">
                                           <a class="nav-link " href="#">SIGN UP AS A PRO<span class="sr-only">(current)</span></a>
                                         </li>
                                         
                                         
-                                        <li class="nav-item active login">
-                                                <a class="nav-link " href="#">LOG IN<span class="sr-only">(current)</span></a>
-                                         </li>
+                                        <li class="nav-item active log-in">
+                                            <a class="nav-link blu " href="#">LOG IN<span class="sr-only">(current)</span></a>
+                                     </li>
                                         
                                       </ul>
-                                      <form class="form-inline navform">
-                                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                      <form class="form-inline navform hide" id="nav_search">
+                                          <input class="form-control mr-sm-2" type="search" placeholder="What do you want" aria-label="Search">
+                                          <input class="form-control mr-sm-2" type="search" placeholder="Where do you need it" aria-label="Search">
+                                          <button class="btn btn-outline-success my-2 my-sm-0 blue-color" type="submit">Search</button>
                                       </form>
-                                    </div>
-                                  </nav>
+                                </div>      
+                            </nav>
                         
                         </div>
                     </div>
@@ -84,8 +76,8 @@
            <div class="container margintop200">
 
             <div class="row">
-              <div class="col-md-4"></div>
-              <div class="col-md-4">
+              <div class="col-xl-4 col-md-1"></div>
+              <div class="col-xl-4 col-md-10">
                 <div class="search_form">
                     <form>
                         <div class="form-group">
@@ -106,7 +98,7 @@
                     
                 </div>
               </div>
-              <div class="col-md-4"></div>
+              <div class="col-xl-4 col-md-1"></div>
             </div>
                          
                
@@ -184,7 +176,22 @@
           </div>
           <footer>
               <div class="container">
-                truths
+                <div class="row margin0-lr">
+                    <div class="col-md-7 col-xs-4 margin0-lr">
+                        <a href=""><i class="fa fa-instagram"></i></a>
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                        <a href=""><i class="fa fa-youtube"></i></a>
+                      </div>
+                      <div class="col-md-5 col-xs-8">
+                          <a href=""><i class="fa fa-phone"></i><span>08030909943</span></a>
+                          <a href=""><i class="fa fa-envelope"></i><span>hello@ays.com</span></a>
+                      </div>
+                </div>
+                
+                
+                
+        
               </div>
           </footer>
         </div>
@@ -200,21 +207,39 @@
    
 </body>
 <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-        }
+    const navbar = document.getElementById("navAYS")
+    const navform = document.getElementById("nav_search")
+    const navauth = document.getElementById("auth")
+    window.onscroll = function(){
+      if ((document.documentElement.scrollTop >= 100) && (window.innerWidth > 414)) {
+        navbar.classList.add('colored_nav')
+        navbar.classList.remove('transparent_nav')
+        navform.classList.add('show')
+        navform.classList.remove('hide')
+        navauth.classList.add('hide')
+        navauth.classList.remove('show')
         
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-          document.getElementById("main").style.marginLeft= "0";
-        }
-</script>
-
-<script>
-$(document).ready(function(){
-  $(".navform").hide();
-})
-</script>
+      } 
+      
+      else {
+        navbar.classList.add('transparent_nav')
+        navbar.classList.remove('colored_nav')
+        navform.classList.remove('show')
+        navform.classList.add('hide')
+        navauth.classList.remove('hide') 
+        navauth.classList.add('show')
+      }
+  
+      if ((document.documentElement.scrollTop >= 100)) {
+        navbar.classList.add('colored_nav')
+        navbar.classList.remove('transparent_nav')
+        
+        
+      } 
+      const y = document.documentElement.scrollTop
+      console.log('the value of y is ' + y);
+  
+    }
+  </script>
 </html>
  
