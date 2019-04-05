@@ -641,6 +641,10 @@ border-radius:  5px !important;
     width: 70% !important
 }
 
+.menu-item ul{
+    float:right !important;
+}
+
 .menu-item form{
     width: 100%;
 }
