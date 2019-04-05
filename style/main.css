@@ -627,7 +627,7 @@ border-radius:  5px !important;
 
 .app-download  .download_app{
     float: right;
-    /* padding-top:30px; */
+     
      
 }
 
@@ -996,10 +996,7 @@ border-radius:  5px !important;
 }
 
 .download_app{
-<<<<<<< HEAD
-=======
     margin-top: 4%;
->>>>>>> neville
     margin-bottom: 2%;
     
 }
