@@ -631,7 +631,31 @@ border-radius:  5px !important;
      
 }
 
+.brand{
+    display: inline-block !important;
+    width: 30% !important;
+}
 
+.menu-item{
+    display: inline-block !important;
+    width: 70% !important
+}
+
+.menu-item form{
+    width: 100%;
+}
+
+.menu-item form input{
+    width: 30% !important;
+    margin-left: 1%;
+    margin-right: 1%;
+    display: inline-block !important;
+}
+
+.menu-item form button {
+    margin-left: 1%;
+    margin-right: 1%
+}
 /**styles for carousel **/
 .recommended{
     color: #199bfb;
