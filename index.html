@@ -77,12 +77,22 @@
                         <h3>Find the right pro</h3>
                         <div class="form-group">
                           <label for="exampleInputEmail1">What Service do you need</label>
-                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                          <input type="text" class="form-control" id="inputService" aria-describedby="" placeholder="">
+                          <div class="result">
+                            <ul id="serviceResult">
+                              <li></li>
+                            </ul>
+                          </div>
                           
                         </div>
                         <div class="form-group">
                           <label for="exampleInputPassword1">Where do you need</label>
-                          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+                          <input type="text" class="form-control" id="inputLocation" placeholder="">
+                          <div class="result">
+                              <ul id="locationResult">
+                                <li></li>
+                              </ul>
+                            </div>
                         </div>
                         
                         <button type="submit" class="btn btn-primary blue-ish">continue</button>
@@ -206,7 +216,7 @@
                     <div class="col-xs-3 col-sm-3 col-md-3">
                       <img src="images/g1.jpg">
                       <caption>Legal</caption>
-                      
+                      ""
                     </div>   
                   </div>
                   <div class="carousel-item">
@@ -496,5 +506,35 @@ $(document).ready(function(){
 
   }
 </script>
+
+<script>
+const service = document.getElementById("inputService");
+const arr = ['cook', 'baker', 'gardener', 'lawyer', 'driver'];
+service.addEventListener('keypress', function(){
+  const resultServ = document.getElementById("serviceResult")
+  for (let index = 0; index < arr.length; index++) {
+    const serviceList = document.createElement('li')
+    const element = document.createTextNode(arr[index])
+    serviceList.appendChild(element)
+    resultServ.appendChild(serviceList)
+    console.log(serviceList);
+  }
+})
+</script>
+
+<script>
+const loc = document.getElementById("inputLocation");
+const arr1 = ['Lekki', 'Ajah', 'Surulere', 'Ikorodu', 'Bariga'];
+loc.addEventListener('keypress', function(){
+  const resultLoc = document.getElementById("locationResult")
+  for (let index = 0; index < arr1.length; index++) {
+    const locList = document.createElement('li')
+    const element = document.createTextNode(arr1[index])
+    locList.appendChild(element)
+    resultLoc.appendChild(locList)
+    console.log(locList);
+  }
+})
+</script></script>
 </html>
  
