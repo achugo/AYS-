@@ -295,11 +295,95 @@ padding-left: 8px;
     .button_search{
         width: 25%;
     }
+    .sign_up {
+      
+        font-size: 12px !important;
+        
+     
+    }
+
+    .log-in {
+       
+       
+        font-size: 12px !important;
+       
+    }
+
+    .download_app {
+        margin-top: 9% !important;
+        margin-right: 70px !important;
+    }
 }
-/* .input_search{
-    width: 52%;
-    display: inline-block;
-} */
+
+@media(max-width:360px){
+  
+    .sign_up {
+      
+        font-size: 12px !important;
+        padding: 4.8px 10px;
+     
+    }
+
+    .log-in {
+       
+       
+        font-size: 12px !important;
+        padding: 2px 17px;
+    }
+
+    .margintop200 {
+        margin-top: 23vh !important;
+    }
+
+    .download_app {
+        margin-top: 9% !important;
+        margin-right: 55px !important;
+    }
+}
+
+@media(max-width:375px){
+  
+    .sign_up {
+      
+        font-size: 12px !important;
+        
+     
+    }
+
+    .log-in {
+       
+       
+        font-size: 12px !important;
+     
+    }
+
+    .margintop200 {
+        margin-top: 23vh !important;
+    }
+
+    .download_app {
+        margin-top: 9% !important;
+        margin-right: 55px !important;
+    }
+}
+
+@media(max-width:768px){
+    .download_app {
+        margin-top: 6% ;
+        margin-right: 250px;
+    }
+    
+}
+
+
+@media(max-width:1024px){
+    .download_app {
+        margin-top: 9% ;
+    margin-right: 350px ;
+    }
+    
+}
+
 
 .search_button{
     width: 15%;
@@ -326,6 +410,12 @@ padding-left: 8px;
     background: #179cff !important;
     border: none !important;
     border-radius: 0 3px 3px 0px !important;
+}
+
+.go-down{
+    padding-bottom: 1.4rem!important;
+    padding-top: .5rem;
+}
 }
 
 
@@ -432,6 +522,7 @@ padding-left: 8px;
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+   
   }
   /**end of mobile nav **/
 
@@ -477,8 +568,12 @@ padding-left: 8px;
 @media(min-width:1024px){
 
     .one_hunnid{
+<<<<<<< HEAD
         padding-left: 25vh;
         padding-right: 25vh;
+=======
+       
+>>>>>>> d58d1c90175c9c9baaafb12b3aab6e05d7373f54
         padding-top: 2rem !important;
     }
 
