@@ -54,17 +54,6 @@ body{
     
 }
 
-/* @media(max-width:1024px){
-    .header-top{
-        display: none;
-    } 
-    .header-bottom{
-        color:#fff;
-        /* display: block; */
-        display: none;
-        
-    }
-} */
 
 
 
@@ -421,8 +410,6 @@ padding-left: 8px;
     padding-bottom: 1.4rem!important;
     padding-top: .5rem;
 }
-}
-
 
 .freelancers{
     padding: 20px;
@@ -778,6 +765,11 @@ border-radius:  5px !important;
     position: relative;
 }
 
+@media(min-width:769px){
+.ad_section{
+    height: 26vh;
+}
+}
   footer{
     background-color: #ededed;
     margin-top: 1rem;
@@ -1261,4 +1253,12 @@ ul li.dropdown a{
 
 .no_flex{
     flex-grow: 0 !important;
+}
+
+.small-font{
+    font-size: 21px;
+}
+
+.apps img {
+    width: 49%;
 }
