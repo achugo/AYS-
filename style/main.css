@@ -597,8 +597,18 @@ padding-left: 8px;
     
 }
 
+.brand{
+    display: inline;
+}
 
-
+@media(max-width:768px){
+    ul.disp{
+        width:60%;
+    }
+}
+.menu-item{
+    display: inline;
+}
 .nav-link{
     color: #ffffff !important;
 }
