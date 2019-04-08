@@ -163,6 +163,16 @@ padding-left: 8px;
     font-size: 15px;
     
 }
+
+@media(max-width:768px){
+    .sign_up{
+        padding: 5px 5px;
+    }
+    .log-in{
+        padding: 1px 15px;
+    }
+
+}   
 /** animated words for jobs **/
 .animated-words{
     display:inline-block;
@@ -547,10 +557,17 @@ padding-left: 8px;
     display: none;
 }
 
+
 .disp{
     display: flex;
 }
+.disp input, button {
+    border-radius: 0 !important;
+}
 
+.disp .sign_up, .log-in{
+    border-radius: 0 !important;
+}
 .transparent_nav{
     background-color: transparent !important;
 }
@@ -574,6 +591,13 @@ padding-left: 8px;
   
   
 }
+
+.package{
+    width:100%;
+    
+}
+
+
 
 .nav-link{
     color: #ffffff !important;
