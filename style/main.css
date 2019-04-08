@@ -100,7 +100,7 @@ ul.menu-items li a {
 }
 
 .bg-cover{
-    background: url(../images/bg.jpg);
+    background: url(../images/Banner.gif);
     width: 100%;
     /* height: auto; */
     position:relative;
@@ -452,7 +452,7 @@ padding-left: 8px;
 }
 
 .margintop200{
-    margin-top: 20vh;
+    margin-top: 28vh;
 }
 .gold {
     color: #eaaf25 !important;
@@ -553,6 +553,11 @@ padding-left: 8px;
     color: #ffffff !important;
     padding-bottom: 20px
 }
+
+.one_hunnid img{
+    width: 40%;
+}
+
 .hide{
     display: none;
 }
@@ -746,6 +751,10 @@ border-radius:  5px !important;
   .footer_sec{
     height: 30%;
     position: relative;
+  }
+
+  .footer_sec img{
+      width: 40%;
   }
 
   @media(max-width:800px){
