@@ -513,7 +513,7 @@
   const navform = document.getElementById("nav_search")
   const navauth = document.getElementById("auth")
   window.onscroll = function(){
-    if ((document.documentElement.scrollTop >= 100) ) {
+    if ((document.documentElement.scrollTop >= 100) && (window.innerWidth > 414) ) {
       navbar.classList.add('colored_nav')
       navbar.classList.remove('transparent_nav')
       navform.classList.add('disp')
