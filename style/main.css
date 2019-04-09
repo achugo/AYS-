@@ -617,6 +617,7 @@ padding-left: 8px;
 @media(max-width:768px){
     ul.disp{
         width:60%;
+        padding-left:10%;
     }
 }
 .menu-item{
@@ -1382,6 +1383,37 @@ ul li.dropdown a{
 }
 
 /**testimonial section **/
+/* -------------------- Select Box Styles: stackoverflow.com Method */
+/* -------------------- Source: http://stackoverflow.com/a/5809186 */
+select#soflow, select#soflow-color {
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    color: #555;
+    font-size: inherit;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px;
+ }
+ 
+ select#soflow-color {
+    color: #fff;
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#779126, #779126 40%, #779126);
+    background-color: #779126;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding-left: 15px;
+ }
 .testimonial {
     border: 2px solid #ccc;
     background-color: #eee;
@@ -1468,7 +1500,7 @@ fieldset {
 	cursor:pointer;
 	width:100%;
 	border:none;
-	background:#0CF;
+	background:#179cff;
 	color:#FFF;
 	margin:0 0 5px;
 	padding:10px;
@@ -1476,7 +1508,7 @@ fieldset {
 }
 
 #contact button[type="submit"]:hover {
-	background:#09C;
+	background:#163245;
 	-webkit-transition:background 0.3s ease-in-out;
 	-moz-transition:background 0.3s ease-in-out;
 	transition:background-color 0.3s ease-in-out;
@@ -1552,7 +1584,7 @@ fieldset {
 	-moz-transition: translate3d(-50%, -50%, 0);
 	-o-transition: translate3d(-50%, -50%, 0);
     transition: translate3d(-50%, -50%, 0); */
-    padding-top: 10%;
+    padding-top: 20%;
 	
 }
 
@@ -1752,4 +1784,30 @@ fieldset {
     width: 29%;
     display: inline-block;
     margin-left:-5px;
+}
+
+.ays_acc{
+    padding-top: 5%;
+    font-size: 13px;
+}
+.forgot_pass{
+    float: right;
+    font-size: 13px !important;
+}
+
+.create_acc{
+    float: right;
+}
+
+.logo_login{
+    margin: 0px auto;
+    text-align: center;
+}
+
+.margintop18vh{
+    margin-top: 18vh;
+}
+
+.marginpad{
+    margin-bottom: 10%;
 }

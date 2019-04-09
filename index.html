@@ -42,7 +42,7 @@
                                         
                                         
                                         <li class="nav-item active log-in">
-                                            <a class="nav-link blu " href="#">LOG IN<span class="sr-only">(current)</span></a>
+                                            <a class="nav-link blu " href="login.html">LOG IN<span class="sr-only">(current)</span></a>
                                      </li>
                                         
                                       </ul>
@@ -65,12 +65,12 @@
            <div class="container margintop200">
 
             <div class="row">
-              <div class="col-lg-5 sec_find">
+              <div class="col-xl-5 sec_find">
                 <h1 class="find-caption">Find verified service professionals for any task you need</h1>
               
               </div>
-              <div class="col-lg-2"></div>
-              <div class="col-lg-5">
+              <div class="col-xl-2"></div>
+              <div class="col-xl-5">
                 <div class="search_form">
                     <form>
                         <h3>Find the right professional</h3>
@@ -379,29 +379,38 @@
             <p>Here’s what our clients are saying about us</p>
             
             <div class="testimonial">
-                 <p><span>Chris Fox.</span> CEO at Mighty Schools.</p>
+                 <p><span>Chris Fox.</span></p>
                 <p>John Doe saved us from a web disaster.</p>
               </div>
               
               <div class="testimonial">
-               <p><span>Rebecca Flex.</span> CEO at Company.</p>
+               <p><span>Rebecca Flex.</span></p>
                 <p>No one is better than John Doe.</p>
             </div>
                 <form id="contact" action="" method="post">
                   <h3 class="recommended">Leave A Comment</h3>
                   <h4>Your feedback matters to us</h4>
                   <fieldset>
-                    <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                      <select id="soflow">
+                          <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
+                          <option>Select an Option</option>
+                          <option>I hired someone from AtYourService</option>
+                          <option>I got a client from AtYourService</option>
+                          <option>Something else</option>
+                        </select>
+ 
                   </fieldset>
                   <fieldset>
-                      <input placeholder="Your Position/Business if any" type="text" tabindex="1" required autofocus>
+                      <textarea placeholder="Type your comment here...." tabindex="5" required></textarea>
                     </fieldset>
                   <fieldset>
-                    <input placeholder="Your Email Address" type="email" tabindex="2" required>
-                  </fieldset>
+                      <input placeholder="What’s your name, please?" type="text" tabindex="1" required autofocus>
+                    </fieldset>
                   <fieldset>
-                    <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+                    <input placeholder="What’s your email address? (This information will not be visible to the public, just for contact purposes.)
+                    " type="email" tabindex="2" required>
                   </fieldset>
+                  
                   <fieldset>
                     <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
                   </fieldset>
@@ -423,12 +432,12 @@
                 <h2 class="down">Top Professions</h2>
                 <div class="footer_list">
                     <ul>
-                      <li>Writing and Printing</li>
-                      <li>Business</li>
-                      <li>Cleaning and Maintenance</li>
-                      <li>Industrial</li>
-                      <li>Digital Media and PR</li>
-                      <li>Legal</li>
+                      <li><a href="#">Writing and Printing</a></li>
+                      <li><a href="#">Business</a></li>
+                      <li><a href="#">Cleaning and Maintenance</a></li>
+                      <li><a href="#">Industrial</a></li>
+                      <li><a href="#">Digital Media and PR</a></li>
+                      <li><a href="#">Legal</a></li>
        
                     </ul>
                 </div>
@@ -440,12 +449,12 @@
                 <h2>Company</h2>
                 <div class="footer_list">
                     <ul>
-                      <li>About Us</li>
-                      <li>FAQs</li>
-                      <li>Blog</li>
-                      <li>Careers</li>
-                      <li>Terms of Service</li>
-                      <li>Privacy Policy</li>
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="#">FAQs</a></li>
+                      <li><a href="#">Blog</a></li>
+                      <li><a href="#">Careers</a></li>
+                      <li><a href="#">Terms of Service</a></li>
+                      <li><a href="#">Privacy Policy</a></li>
                       
   
                     </ul>
@@ -454,8 +463,8 @@
               <div class="col-md-4">
                   <div class="footer_sec">
                      <div class="footer_app">
-                       <img src="images/appstore.png" />
-                       <img src="images/playstore.png" />
+                       <a href="#"><img src="images/appstore.png" /></a>
+                       <a href="#"><img src="images/playstore.png" /></a>
                      </div>
                   </div>
                   <div class="ad_section">
@@ -467,13 +476,13 @@
           <footer>
               <div class="container">
                 <div class="row margin0-lr">
-                    <div class="col-md-3 margin0-lr">
+                    <div class="col-md-4 margin0-lr">
                         <a href=""><i class="fa fa-instagram"></i></a>
                         <a href=""><i class="fa fa-facebook"></i></a>
                         <a href=""><i class="fa fa-twitter"></i></a>
                         <a href=""><i class="fa fa-youtube"></i></a>
                       </div>
-                      <div class="col-md-8"></div>
+                      <div class="col-md-4"></div>
                       <div class="col-md-4">
                           <a href=""><i class="fa fa-phone"></i><span>08030909943</span></a>
                           <a href=""><i class="fa fa-envelope"></i><span>hello@ays.com</span></a>
@@ -509,6 +518,7 @@
     if ((document.documentElement.scrollTop >= 100) && (window.innerWidth > 414) ) {
       navbar.classList.add('colored_nav')
       navbar.classList.remove('transparent_nav')
+      
       navform.classList.add('disp')
       navform.classList.remove('hide')
       navauth.classList.add('hide')
@@ -523,6 +533,7 @@
       navform.classList.add('hide')
       navauth.classList.remove('hide') 
       navauth.classList.add('disp')
+     
     }
 
     if ((document.documentElement.scrollTop >= 100)) {
@@ -534,6 +545,10 @@
     const y = document.documentElement.scrollTop
     console.log('the value of y is ' + y);
 
+  }
+
+  if(window.innerWidth < 500){
+    navbar.classList.remove('fixed-top')
   }
 </script>
 
