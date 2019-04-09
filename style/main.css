@@ -264,6 +264,8 @@ padding-left: 8px;
 @media(max-width:768px){
     .search_form{
         margin-top:2.6rem;
+        padding: 1rem;
+
     }
 }
 
@@ -1736,3 +1738,18 @@ fieldset {
 }
 
 /** profile pic upload and **/
+
+.loc_search{
+    width:70%;
+    display: inline-block
+
+}
+.loc_search input{
+    border-radius: 0px !important;
+}
+
+.loc_button{
+    width: 29%;
+    display: inline-block;
+    margin-left:-5px;
+}
