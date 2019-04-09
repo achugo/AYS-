@@ -558,6 +558,12 @@ padding-left: 8px;
     width: 40%;
 }
 
+@media(max-width:768px){
+  .one_hunnid .navbar-brand img{
+    width: 90px !important;
+    }  
+}
+
 .hide{
     display: none;
 }
@@ -1189,7 +1195,7 @@ a.w3pvt_facebook {
     margin-left: 20px;
 }
 
-.right{
+.wright{
     padding-left:5px;
 }
 
