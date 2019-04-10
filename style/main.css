@@ -339,7 +339,7 @@ padding-left: 8px;
     }
 
     .margintop200 {
-        margin-top: 10vh !important;
+        margin-top: 8vh !important;
     }
 
     .download_app {
@@ -365,7 +365,7 @@ padding-left: 8px;
     }
 
     .margintop200 {
-        margin-top: 10vh !important;
+        margin-top: 8vh !important;
     }
 
     .download_app {
@@ -567,11 +567,20 @@ padding-left: 8px;
 }
 
 @media(max-width:768px){
-  .one_hunnid .navbar-brand img{
+  #logo_dashboard{
     width: 90px !important;
     }  
+    .one_hunnid .navbar-brand img{
+        width: 90px;
+    }
+      
 }
-
+@media(max-width:768px){
+    .one_hunnid .navbar-brand li a img{
+      width: 90px !important;
+      }  
+  }
+  
 .hide{
     display: none;
 }
@@ -624,6 +633,13 @@ padding-left: 8px;
     ul.disp{
         width:60%;
         padding-left:10%;
+    }
+}
+
+@media(max-width:370px){
+    ul.disp{
+        width:60%;
+        padding-left:3%;
     }
 }
 .menu-item{
@@ -739,7 +755,8 @@ border-radius:  5px !important;
   /** section for how it works */
   .how_it_works{
      background-color: #f3f3f3;
-     padding-top:50px;
+     padding-top:8vh;
+     padding-bottom:8vh;
 
   }
 
@@ -1424,7 +1441,7 @@ select#soflow, select#soflow-color {
     border: 2px solid #ccc;
     background-color: #eee;
     border-radius: 5px;
-    padding: 16px;
+    padding: 8px;
     margin: 16px 0
   }
   
@@ -1557,6 +1574,13 @@ fieldset {
 	-moz-transition: border 0.5s linear;
 	-o-transition: border 0.5s linear;
 	transition: border 0.5s linear;
+}
+
+@media(max-width:420px){
+    .avatar{
+        width: 30vh;
+        height: 30vh;
+    }
 }
 
 .avatar:after {
