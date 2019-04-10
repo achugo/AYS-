@@ -1251,11 +1251,14 @@ color: #169cfd;
     position: absolute;
     max-height: 166px;
     text-align: center !important;
-    width: 74%;
-
-    
-    
+    width: 74%;  
    
+}
+
+@media(min-width:768px){
+    .result{
+        width: 84%;
+    }
 }
 
 .result ul {
@@ -1841,3 +1844,9 @@ fieldset {
 .marginpad{
     margin-bottom: 10%;
 }
+
+/* @media(max-width:320px){
+    #auth a{
+        font-size: 10px;
+    }
+} */
