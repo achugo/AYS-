@@ -339,7 +339,7 @@ padding-left: 8px;
     }
 
     .margintop200 {
-        margin-top: 23vh !important;
+        margin-top: 10vh !important;
     }
 
     .download_app {
@@ -365,7 +365,7 @@ padding-left: 8px;
     }
 
     .margintop200 {
-        margin-top: 23vh !important;
+        margin-top: 10vh !important;
     }
 
     .download_app {
@@ -455,6 +455,12 @@ padding-left: 8px;
 
 .margintop200{
     margin-top: 28vh;
+}
+
+@media(max-width:768px){
+    .margintop200{
+        margin-top: 13vh;
+    }
 }
 .gold {
     color: #eaaf25 !important;
