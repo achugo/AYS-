@@ -166,7 +166,7 @@ padding-left: 8px;
 
 @media(max-width:768px){
     .sign_up{
-        padding: 5px 5px;
+        padding: 5px 15px;
     }
     .log-in{
         padding: 1px 15px;
@@ -260,6 +260,7 @@ padding-left: 8px;
 .search_form{
     background-color: #ffffff;
     padding: 3rem;
+    z-index: 1500;
 }
 @media(max-width:768px){
     .search_form{
@@ -575,6 +576,16 @@ padding-left: 8px;
     }
       
 }
+
+@media(max-width:320px){
+    #logo_dashboard{
+      width: 60px !important;
+      }  
+      .one_hunnid .navbar-brand img{
+          width: 60px;
+      }
+        
+  }
 @media(max-width:768px){
     .one_hunnid .navbar-brand li a img{
       width: 90px !important;
