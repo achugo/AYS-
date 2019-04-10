@@ -1255,10 +1255,29 @@ color: #169cfd;
    
 }
 
-@media(min-width:768px){
+@media(max-width:768px){
     .result{
         width: 84%;
     }
+}
+
+@media (max-width: 320px){
+    .sign_up {
+        font-size: 10px !important;
+    }
+
+    .search_form {
+        margin-top: 0rem;
+      
+    }
+
+    .log-in {
+        font-size: 10px !important;
+    }
+
+    .result {
+    width: 81%;
+}
 }
 
 .result ul {
@@ -1306,11 +1325,15 @@ color: #169cfd;
 
 
 .result ul li{list-style-type: none;
-text-align: center;
-cursor: pointer;}
+
+cursor: pointer;
+text-align: left;
+ padding-left: 15px;
+}
 
 .result ul li:hover{
-    background-color: #ccc;
+    background-color: #169cfd;
+    color:#fff
 }
 
 
