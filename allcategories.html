@@ -17,10 +17,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   
 </head>
-<body>pointer
+<body>
    
    <div class="container-fluid padding0-lr">
-       <div class="bg-cover">
+       <div class="bg-cover" style="height:40vh !important;">
 
             <header>
                 <div class="container-fluid">        
@@ -64,41 +64,6 @@
 
            <div class="container margintop200">
 
-            <div class="row">
-              <div class="col-xl-5 sec_find">
-                <h1 class="find-caption">Find verified service professionals for any task you need</h1>
-              
-              </div>
-              <div class="col-xl-2"></div>
-              <div class="col-xl-5">
-                <div class="search_form">
-                    <form>
-                        <h3>Find the right professional</h3>
-                        <div class="form-group">
-                          <label for="what do you want">What do you want?</label>
-                          <input type="text" class="form-control" id="inputService" aria-describedby="" placeholder="">
-                          <div class="result">
-                            <ul id="serviceResult">
-                              <li></li>
-                            </ul>
-                          </div>
-                          
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Where do you need it?</label>
-                          <input type="text" class="form-control" id="inputLocation" placeholder="">
-                          <div class="result">
-                              <ul id="locationResult">
-                                <li></li>
-                              </ul>
-                            </div>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary blue-ish">Search</button>
-                      </form>
-                </div>
-              </div>
-            </div>
                          
                
            </div>
@@ -107,7 +72,7 @@
        </div>
        
         <div class="container section-carousel text-center sec_category">
-          <h1 class="recommended text-left">Top & Trending Categories </h1>
+          <h1 class="recommended text-left">All Categories </h1>
           <div id="demo" class="carousel slide" >
               
               <!-- The slideshow -->
@@ -329,96 +294,13 @@
                   </a>
                 </div>
 
-                <div class="create_account text-center">
-                    <button class="btn btn-primary blue-ish">Explore all categories</button>
-                </div>
-    
+               
   
       </div>
         
-        <div class="container-fluid how_it_works">
-          <div class="container">
-              <div class="text-center move-down"><h2>How It Works</h2></div>
-              <div class="descrp_how text-center move-down"><p>AtYourService is the best way to find a verified professional for any specific task</p></div>
-              
-                  <div class="row">
-                    
-                    
-                    <div class="col-md-4 text-center">
-                      <img src="images/g99.png">
-                      <div class="how text-center">
-                        <h5>Search <br></h5>
-                        <h6 class="quick">Tell us the profession you are looking for or task you need done, and your location</h6>
-                      </div>
-                    </div>
-                    <div class="col-md-4 text-center">
-                       <img src="images/g200.png">
-                       <div class="how text-center">
-                         <h5>Find</h5>
-                         <h6 class="quick">You will get three options based on your location and the specific task you are searching for</h6>
-                    </div>
-                     </div>
-                     <div class="col-md-4 text-center">
-                         <img src="images/g300.png">
-                         <div class="how text-center">
-                           <h5>Hire</h5>
-                           <h6 class="quick">Look through the suggested professionals, pick the one who matches your exact need and call them</h6>
-                          </div>
-                     </div>
-                     
-                   
-                  
-                </div>
-               
-          </div>
-            
-        </div>
+        
 
-        <div class="container">
-            <h1 class="recommended text-left">Testimonials</h1>
-            <p>Here’s what our clients are saying about us</p>
-            
-            <div class="testimonial">
-                 <p><span>Chris Fox.</span></p>
-                <p>John Doe saved us from a web disaster.</p>
-              </div>
-              
-              <div class="testimonial">
-               <p><span>Rebecca Flex.</span></p>
-                <p>No one is better than John Doe.</p>
-            </div>
-                <form id="contact" action="" method="post">
-                  <h3 class="recommended">Leave A Comment</h3>
-                  <h4>Your feedback matters to us</h4>
-                  <fieldset>
-                      <select id="soflow">
-                          <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
-                          <option>Select an Option</option>
-                          <option>I hired someone from AtYourService</option>
-                          <option>I got a client from AtYourService</option>
-                          <option>Something else</option>
-                        </select>
- 
-                  </fieldset>
-                  <fieldset>
-                      <textarea placeholder="Type your comment here...."required></textarea>
-                    </fieldset>
-                  <fieldset>
-                      <input placeholder="What’s your name, please?" type="text" >
-                    </fieldset>
-                  <fieldset>
-                    <input placeholder="What’s your email address? (This information will not be visible to the public, just for contact purposes.)
-                    " type="email" >
-                  </fieldset>
-                  
-                  <fieldset>
-                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-                  </fieldset>
-                </form>
-               
-                
-             
-        </div>
+        
         
         <div class="container-fluid padding0-lr">
           <div class="container footer1">
@@ -552,34 +434,7 @@
   }
 </script>
 
-<script>
-const service = document.getElementById("inputService");
-const arr = ['cook', 'baker', 'gardener', 'lawyer', 'driver'];
-service.addEventListener('keypress', function(){
-  const resultServ = document.getElementById("serviceResult")
-  for (let index = 0; index < arr.length; index++) {
-    const serviceList = document.createElement('li')
-    const element = document.createTextNode(arr[index])
-    serviceList.appendChild(element)
-    resultServ.appendChild(serviceList)
-    console.log(serviceList);
-  }
-})
-</script>
 
-<script>
-const loc = document.getElementById("inputLocation");
-const arr1 = ['Lekki', 'Ajah', 'Surulere', 'Ikorodu', 'Bariga'];
-loc.addEventListener('keypress', function(){
-  const resultLoc = document.getElementById("locationResult")
-  for (let index = 0; index < arr1.length; index++) {
-    const locList = document.createElement('li')
-    const element = document.createTextNode(arr1[index])
-    locList.appendChild(element)
-    resultLoc.appendChild(locList)
-    console.log(locList);
-  }
-})
 </script></script>
 </html>
  
