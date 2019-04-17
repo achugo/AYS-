@@ -17,7 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   
 </head>
-<body>pointer
+<body>
    
    <div class="container-fluid padding0-lr">
        <div class="bg-cover">
@@ -48,7 +48,7 @@
                                       </ul>
                                       <form class="form-inline navform hide" id="nav_search">
                                           <input class="form-control mr-sm-2" type="search" placeholder="What do you want" aria-label="Search">
-                                          <input class="form-control mr-sm-2" type="search" placeholder="Where do you need it" aria-label="Search">
+                                          <input class="form-control mr-sm-2" type="search" onkeyup="loadServices();" placeholder="Where do you need it" aria-label="Search">
                                           <button class="btn btn-outline-success my-2 my-sm-0 blue-color" type="submit">Search</button>
                                       </form>
                                 </div>      
@@ -378,20 +378,27 @@
             <h1 class="recommended text-left">Testimonials</h1>
             <p>Here’s what our clients are saying about us</p>
             
-            <div class="testimonial">
-                 <p><span>Chris Fox.</span></p>
-                <p>John Doe saved us from a web disaster.</p>
-              </div>
-              
-              <div class="testimonial">
-               <p><span>Rebecca Flex.</span></p>
-                <p>No one is better than John Doe.</p>
+            <div id="testimonalSpace">
+                <div class="testimonial">
+                    <p><span>Chris Fox.</span></p>
+                  <p>John Doe saved us from a web disaster.</p>
+                </div>
+                
+                <div class="testimonial">
+                  <p><span>Rebecca Flex.</span></p>
+                  <p>No one is better than John Doe.</p>
+                </div>
             </div>
+            
+
+            
+
+            <div class="text-center"><button id="seeMore">see more</button></div>
                 <form id="contact" action="" method="post">
                   <h3 class="recommended">Leave A Comment</h3>
                   <h4>Your feedback matters to us</h4>
                   <fieldset>
-                      <select id="soflow">
+                      <select id="soflow" name="reason">
                           <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
                           <option>Select an Option</option>
                           <option>I hired someone from AtYourService</option>
@@ -401,14 +408,14 @@
  
                   </fieldset>
                   <fieldset>
-                      <textarea placeholder="Type your comment here...."required></textarea>
+                      <textarea placeholder="Type your comment here...."required id="comment" name="comment"></textarea>
                     </fieldset>
                   <fieldset>
-                      <input placeholder="What’s your name, please?" type="text" >
+                      <input placeholder="What’s your name, please?" type="text" name="commenterName" id="commenterName" >
                     </fieldset>
                   <fieldset>
                     <input placeholder="What’s your email address? (This information will not be visible to the public, just for contact purposes.)
-                    " type="email" >
+                    " type="email" name="commenterEmail" id="commenterEmail" >
                   </fieldset>
                   
                   <fieldset>
@@ -555,16 +562,27 @@
 <script>
 const service = document.getElementById("inputService");
 const arr = ['cook', 'baker', 'gardener', 'lawyer', 'driver'];
-service.addEventListener('keypress', function(){
-  const resultServ = document.getElementById("serviceResult")
+var resultServ = document.getElementById("serviceResult")
+service.addEventListener('keypress', loadServices)
+
+function loadServices(){
+  
   for (let index = 0; index < arr.length; index++) {
     const serviceList = document.createElement('li')
     const element = document.createTextNode(arr[index])
     serviceList.appendChild(element)
     resultServ.appendChild(serviceList)
+    serviceList.addEventListener('click', function(){
+        service.value = serviceList.innerText;
+        resultServ.classList.add('hide')
+        console.log(service.value)
+    })
+    resultServ.classList.add('show')
     console.log(serviceList);
   }
-})
+}
+
+
 </script>
 
 <script>
@@ -577,9 +595,16 @@ loc.addEventListener('keypress', function(){
     const element = document.createTextNode(arr1[index])
     locList.appendChild(element)
     resultLoc.appendChild(locList)
+    locList.addEventListener('click', function(){
+        loc.value = locList.innerText;
+        resultLoc.classList.add('hide')
+        console.log(loc.value)
+    })
     console.log(locList);
   }
 })
-</script></script>
+</script>
+
+<script src="storage.js"></script>
 </html>
  
