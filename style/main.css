@@ -669,13 +669,24 @@ padding-left: 8px;
     color:#fff;
 } 
 
-.sec_category{
+.sec_categoryDesktop{
     display: block;
 }
 
 @media(max-width:768px){
-    .sec_category{
+    .sec_categoryDesktop{
         display: none;
+    }
+    
+}
+
+.sec_categoryMobile{
+    display: none;
+}
+
+@media(max-width:768px){
+    .sec_categoryMobile{
+        display: block;
     }
     
 }
@@ -752,7 +763,7 @@ border-radius:  5px !important;
     background-color:#000000;
     color: #ededed !important;
     border-radius: 50%;
-    left: 40%;
+    left: 30%;
     position: relative;
   }
 
@@ -1884,3 +1895,15 @@ fieldset {
         font-size: 10px;
     }
 } */
+
+
+/** mobile slide implementatoin slide **/
+#mobileSlide{
+    display: none
+}
+
+@media(max-width:768px){
+    #mobileSlide{
+        display: block;
+    }
+}
