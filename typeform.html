@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trusted Freelance Professionals, Free &amp; Easy Contacts, Connections</title>
+    <link rel="shortcut icon" type="image/png" href="images/favi.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+   
+   <div class="container-fluid padding0-lr">
+       <div class="bg-cover">
+
+            <header>
+                <div class="container-fluid">        
+            
+                    <div class="container">
+                        <div class="row header-bottom">
+                       
+                            <nav class="navbar navbar-expand-md fixed-top navbar-light one_hunnid" id="navAYS">
+                              <div class="container">
+                                
+
+                                    <a class="navbar-brand pb-2 go-down" id="logo_dashboard" href="#"><img src="images/Logo1.svg" alt="logo"></a>
+                                    
+                                 
+                                      <ul class="navbar-nav " id="auth">
+                                        <li class="nav-item active sign_up">
+                                          <a class="nav-link " href="#">SIGN UP<span class="sr-only">(current)</span></a>
+                                        </li>
+                                        
+                                        
+                                        <li class="nav-item active log-in">
+                                            <a class="nav-link blu " href="login.html">LOG IN<span class="sr-on.ly">(current)</span></a>
+                                     </li>
+                                        
+                                      </ul>
+                                      
+                                </div>      
+                            </nav>
+                        
+                        </div>
+                    </div>
+
+                   
+               
+           </header>
+           
+
+           <div class="container margintop200">
+
+            <div class="row">
+                <div class="col-xl-2"></div>
+              <div class="col-xl-5">
+                <div class="search_form borderadius10">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">What's your Profession</label>
+                            <div>Chose as Many as are applicable</div>
+                            <div class="checkboxx" id="profSelect">
+                                    <span class="profession">Technician</span>
+                                    <input type="checkbox" id="inputLocation">
+                                    
+                            </div>
+                        </div>
+                        
+                    
+                    </form>
+                </div>
+              
+              </div>
+              
+              
+            </div>
+                         
+               
+           </div>
+           
+           
+       </div>
+       
+
+       
+      
+  
+  </div>
+
+  <script>
+      var opt = document.getElementById('profSelect')
+      opt.addEventListener('click', function(e){
+        var optInput = document.querySelector('#profSelect input')
+        if(optInput.checked != true){
+            console.log(optInput);
+            console.log("I was init false");
+
+            optInput.setAttribute('checked', true)
+        }
+        else{
+            console.log(optInput);
+            console.log("I was init true");
+            optInput.setAttribute('checked', false)
+            
+        }
+      })
+</script>
+  
+   
+</body>
+
+
+
+<script>
+  const navbar = document.getElementById("navAYS")
+  const navform = document.getElementById("nav_search")
+  const navauth = document.getElementById("auth")
+  window.onscroll = function(){
+    if ((document.documentElement.scrollTop >= 100) && (window.innerWidth > 414) ) {
+      navbar.classList.add('colored_nav')
+      navbar.classList.remove('transparent_nav')
+      
+      navform.classList.add('disp')
+      navform.classList.remove('hide')
+      navauth.classList.add('hide')
+      navauth.classList.remove('disp')
+      
+    } 
+    
+    else {
+      navbar.classList.add('transparent_nav')
+      navbar.classList.remove('colored_nav')
+      navform.classList.remove('disp')
+      navform.classList.add('hide')
+      navauth.classList.remove('hide') 
+      navauth.classList.add('disp')
+     
+    }
+
+    if ((document.documentElement.scrollTop >= 100)) {
+      navbar.classList.add('colored_nav')
+      navbar.classList.remove('transparent_nav')
+      
+      
+    } 
+    const y = document.documentElement.scrollTop
+    console.log('the value of y is ' + y);
+
+  }
+
+  if(window.innerWidth < 500){
+    navbar.classList.remove('fixed-top')
+  }
+</script>
+
+
+
+<script src="storage.js"></script>
+</html>
+ 

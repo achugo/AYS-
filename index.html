@@ -47,8 +47,18 @@
                                         
                                       </ul>
                                       <form class="form-inline navform hide" id="nav_search">
-                                          <input class="form-control mr-sm-2" type="search" placeholder="What do you want" aria-label="Search">
-                                          <input class="form-control mr-sm-2" type="search" onkeyup="loadServices();" placeholder="Where do you need it" aria-label="Search">
+                                          <input class="form-control mr-sm-2" id="inputService0" type="search" placeholder="What do you want" aria-label="Search">
+                                          <div class="result0">
+                                            <ul id="serviceResult0">
+                                              <li></li>
+                                            </ul>
+                                          </div>
+                                          <input class="form-control mr-sm-2" type="search" id="inputLocation0"  placeholder="Where do you need it" aria-label="Search">
+                                          <div class="result01">
+                                            <ul id="LocationResult0">
+                                              <li></li>
+                                            </ul>
+                                          </div>
                                           <button class="btn btn-outline-success my-2 my-sm-0 blue-color" type="submit">Search</button>
                                       </form>
                                 </div>      
@@ -718,6 +728,28 @@
 </script>
 
 <script>
+const service0 = document.getElementById("inputService0");
+const arr0 = ['cook', 'baker', 'gardener', 'lawyer', 'driver'];
+var resultServ0 = document.getElementById("serviceResult0")
+service0.addEventListener('keypress', loadServices0)
+
+function loadServices0(){
+  
+  for (let index = 0; index < arr0.length; index++) {
+    const serviceList = document.createElement('li')
+    const element = document.createTextNode(arr0[index])
+    serviceList.appendChild(element)
+    resultServ0.appendChild(serviceList)
+    serviceList.addEventListener('click', function(){
+        service0.value = serviceList.innerText;
+        resultServ0.classList.add('hide')
+        console.log(service0.value)
+    })
+    resultServ0.classList.add('show')
+    console.log(serviceList);
+  }
+}
+
 const service = document.getElementById("inputService");
 const arr = ['cook', 'baker', 'gardener', 'lawyer', 'driver'];
 var resultServ = document.getElementById("serviceResult")
@@ -744,6 +776,25 @@ function loadServices(){
 </script>
 
 <script>
+const loc0 = document.getElementById("inputLocation0");
+const arr10 = ['Lekki', 'Ajah', 'Surulere', 'Ikorodu', 'Bariga'];
+loc0.addEventListener('keypress', function(){
+  const resultLoc0 = document.getElementById("LocationResult0")
+  for (let index = 0; index < arr10.length; index++) {
+    const locList = document.createElement('li')
+    const element = document.createTextNode(arr10[index])
+    locList.appendChild(element)
+    resultLoc0.appendChild(locList)
+    locList.addEventListener('click', function(){
+        loc0.value = locList.innerText;
+        resultLoc0.classList.add('hide')
+        console.log(loc0.value)
+    })
+    console.log(locList);
+  }
+})
+
+
 const loc = document.getElementById("inputLocation");
 const arr1 = ['Lekki', 'Ajah', 'Surulere', 'Ikorodu', 'Bariga'];
 loc.addEventListener('keypress', function(){

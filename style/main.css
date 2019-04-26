@@ -1907,3 +1907,173 @@ fieldset {
         display: block;
     }
 }
+
+.card-body p, h4{
+    color: #fff !important;
+    line-height: 2.3rem;
+}
+
+.borderadius10{
+    border-radius: 10px !important;
+}
+
+.result0 {
+    color: black;
+    position: absolute;
+    max-height: 166px;
+    text-align: center !important;
+    width: 16.8%;
+    top: 70%
+}    
+.result0 ul {
+    background-color: #fff;
+    border-radius: 0 0 3px 3px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    visibility: visible;
+    padding-left: 0;
+    position: relative;
+    z-index: 1;
+    max-height: 150px; 
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    
+
+}
+
+.result0 ul li::-webkit-scrollbar-thumb{
+    width: 2px;   
+}
+
+
+.result0 ul li{list-style-type: none;
+
+cursor: pointer;
+text-align: left;
+ padding-left: 15px;
+}
+
+.result0 ul li:hover{
+    background-color: #169cfd;
+    color:#fff
+}
+
+.result01 {
+    color: black;
+    position: absolute;
+    max-height: 166px;
+    text-align: center !important;
+    width: 16.8%;
+    top: 70%;
+    right: 15.2%;
+}
+
+.result01 ul {
+    background-color: #fff;
+    border-radius: 0 0 3px 3px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    visibility: visible;
+    padding-left: 0;
+    position: relative;
+    z-index: 1;
+    max-height: 150px; 
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    
+
+}
+
+.result01 ul li::-webkit-scrollbar-thumb{
+    width: 2px;   
+}
+
+
+.result01 ul li{list-style-type: none;
+
+cursor: pointer;
+text-align: left;
+ padding-left: 15px;
+}
+
+.result01 ul li:hover{
+    background-color: #169cfd;
+    color:#fff
+}
+
+#LocationResult0::-webkit-scrollbar-track
+ {
+     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+     border-radius: 10px;
+     background-color: #F5F5F5;
+ }
+ 
+ #LocationResult0::-webkit-scrollbar
+ {
+     width: 5px;
+     background-color: #F5F5F5;
+ }
+ 
+ #LocationResult0::-webkit-scrollbar-thumb
+ {
+     border-radius: 10px;
+     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+     background-color: #ccc;
+ }
+
+ /*
+ *  STYLE 1
+ */
+
+ #serviceResult0::-webkit-scrollbar-track
+ {
+     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+     border-radius: 10px;
+     background-color: #F5F5F5;
+ }
+ 
+ #serviceResult0::-webkit-scrollbar
+ {
+     width: 5px;
+     background-color: #F5F5F5;
+ }
+ 
+ #serviceResult0::-webkit-scrollbar-thumb
+ {
+     border-radius: 10px;
+     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+     background-color: #ccc;
+ }
+
+ .checkboxx{
+    color: rgb(48, 91, 133);
+    background-color: rgba(48, 91, 133, 0.1);
+    box-shadow: rgba(48, 91, 133, 0.8) 0px 0px 0px 2px inset;
+    cursor: pointer;
+    opacity: 1;
+    will-change: opacity;
+    height: auto;
+    border-radius: 4px;
+    animation: 0.25s ease 0s 2 normal none running qNIWx;
+ }
+
+ .checkboxx input[type="checkbox"]{
+    width: 20%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    content: "nigga";
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+
+.checkboxx input[type="checkbox"]::after{
+    background-color: blue;
+}
