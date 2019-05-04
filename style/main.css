@@ -1918,6 +1918,10 @@ fieldset {
     background-color: transparent !important;
     color: white;
 }
+.borderadiuss{
+    border-radius: 10px !important;
+   
+}
 
 .result0 {
     color: black;
