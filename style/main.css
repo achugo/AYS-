@@ -460,7 +460,7 @@ padding-left: 8px;
 
 @media(max-width:768px){
     .margintop200{
-        margin-top: 13vh;
+        margin-top: 13vh !important;
     }
 }
 @media(max-width:500px){
