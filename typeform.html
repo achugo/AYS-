@@ -473,7 +473,7 @@ html{
 
       let secFour = document.querySelector('#section4 .inputboxx input')
         
-        secFour.addEventListener('keypress', function(e){
+        secFour.addEventListener('keyup', function(e){
           let keypress = false;
           let content = secThree.value
           console.log(e)
@@ -493,7 +493,7 @@ html{
 
       let secFive = document.querySelector('#section5 .inputboxx input')
         
-        secFive.addEventListener('keypress', function(e){
+        secFive.addEventListener('keyup', function(e){
           let keypress = false;
           let content = secThree.value
           console.log(e)
@@ -542,7 +542,7 @@ html{
 
       let secSeven = document.querySelector('#section7 .inputboxx input')
         
-        secSeven.addEventListener('keypress', function(e){
+        secSeven.addEventListener('keyup', function(e){
           let keypress = false;
           let content = secThree.value
           console.log(e)
@@ -562,7 +562,7 @@ html{
 
       let secEight = document.querySelector('#section8 .inputboxx input')
         
-        secEight.addEventListener('keypress', function(e){
+        secEight.addEventListener('keyup', function(e){
           let keypress = false;
           let content = secThree.value
           console.log(e)
@@ -582,7 +582,7 @@ html{
 
       let secNine = document.querySelector('#section9 .inputboxx input')
         
-        secNine.addEventListener('keypress', function(e){
+        secNine.addEventListener('keyup', function(e){
           let keypress = false;
           let content = secThree.value
           console.log(e)
@@ -603,7 +603,7 @@ html{
 
       let secTen = document.querySelector('#section10 .inputboxx input')
         
-        secTen.addEventListener('keypress', function(e){
+        secTen.addEventListener('keyup', function(e){
           let keypress = false;
           let content = secThree.value
           console.log(e)
@@ -623,7 +623,7 @@ html{
 
       let secEleven = document.querySelector('#section11 .inputboxx input')
         
-        secEleven.addEventListener('keypress', function(e){
+        secEleven.addEventListener('keyup', function(e){
           let keypress = false;
           let content = secThree.value
           console.log(e)
@@ -649,7 +649,6 @@ html{
           let checked = false;
           let content = element.parentElement.querySelector('.box-content').textContent
           element.value = content;
-          alert("hi")
           Array.from(secTwelve).forEach(e => {
             if(e.checked)
             {
