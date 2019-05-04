@@ -463,6 +463,11 @@ padding-left: 8px;
         margin-top: 13vh;
     }
 }
+@media(max-width:500px){
+    .margintop200{
+        margin-top: 12vh !important;
+    }
+}
 .gold {
     color: #eaaf25 !important;
 }
@@ -2228,4 +2233,10 @@ a.nextbtn:hover{
     /* max-height: 650px; */
     min-height: 100%;
     bottom:0;
+}
+
+@media(max-width:768px){
+    .growBiz{
+        display: none;
+    }
 }
