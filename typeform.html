@@ -8,19 +8,25 @@
     <link rel="shortcut icon" type="image/png" href="images/favi.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  
+
+<style>
+html{
+  scroll-behavior: smooth;
+}
+</style>    
 </head>
 <body>
    
    <div class="container-fluid padding0-lr">
-       <div class="bg-cover">
+       <div class="typeform-bg">
 
             <header>
                 <div class="container-fluid">        
@@ -32,20 +38,7 @@
                               <div class="container">
                                 
 
-                                    <a class="navbar-brand pb-2 go-down" id="logo_dashboard" href="#"><img src="images/Logo1.svg" alt="logo"></a>
-                                    
-                                 
-                                      <ul class="navbar-nav " id="auth">
-                                        <li class="nav-item active sign_up">
-                                          <a class="nav-link " href="#">SIGN UP<span class="sr-only">(current)</span></a>
-                                        </li>
-                                        
-                                        
-                                        <li class="nav-item active log-in">
-                                            <a class="nav-link blu " href="login.html">LOG IN<span class="sr-on.ly">(current)</span></a>
-                                     </li>
-                                        
-                                      </ul>
+                                   hi
                                       
                                 </div>      
                             </nav>
@@ -58,24 +51,312 @@
            </header>
            
 
-           <div class="container margintop200">
+           <div class="container ">
 
             <div class="row">
                 <div class="col-xl-2"></div>
-              <div class="col-xl-5">
+              <div class="col-xl-6">
                 <div class="search_form borderadius10">
                     <form>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">What's your Profession</label>
-                            <div>Chose as Many as are applicable</div>
-                            <div class="checkboxx" id="profSelect">
-                                    <span class="profession">Technician</span>
-                                    <input type="checkbox" id="inputLocation">
-                                    
+                      <div class="form-group" id="section1">
+                            <label for="Profession" class="descHeading">1<i class="fa fa-arrow-right"></i>What's your Profession ? * </label>
+                            <div class="subHeading">Chose as Many as are applicable</div>
+                            <div class="checkboxx" id="profSelect" onclick="">
+                                    <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                                      <input type="checkbox" >
+                                    </label>
                             </div>
+                            
+                            <div class="checkboxx"  onclick="">
+                                <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                                  <input type="checkbox" >
+                                </label>
+                              
+                            </div>
+                            <div class="checkboxx"  onclick="">
+                                <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                                  <input type="checkbox" >
+                                </label>
+                              
+                            </div>  
+                            <div class="checkboxx"  onclick="">
+                                <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                                  <input type="checkbox" >
+                                </label>
+                              
+                            </div> 
+                            <div class="checkboxx"  onclick="">
+                                <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                                  <input type="checkbox" >
+                                </label>
+                              
+                          </div>
+                          <div class="checkboxx"  onclick="">
+                              <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                                <input type="checkbox" >
+                              </label>
+                            
+                          </div>
+                          <div class="checkboxx"  onclick="">
+                              <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                                <input type="checkbox" >
+                              </label>
+                            
+                          </div>  
+                          <div class="checkboxx"  onclick="">
+                              <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                                <input type="checkbox" >
+                              </label>
+                            
+                          </div> 
+                          <div class="checkboxx"  onclick="">
+                              <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                                <input type="checkbox" >
+                              </label>
+                            
                         </div>
+                        <div class="next">
+                          <a class="nextbtn" href="#section2">Next</a>
+                        </div>
+                      </div>
+
+                      
+                      <div class="form-group" id="section2">
+                            <label for="Profession" class="descHeading">Preferred Client Location ? * </label>
+                            <div class="subHeading">Chose as Many as are applicable</div>
+                            
+                            <div class="checkboxx" id="profSelect" onclick="">
+                                <label class="profession"><span class="letters">A</span>Anywhere
+                                  <input type="checkbox" >
+                                </label>
+                              
+                            </div>
+                            <div class="checkboxx" id="profSelect" onclick="">
+                                <label class="profession"><span class="letters">B</span>My city
+                                  <input type="checkbox" >
+                                </label>
+                              
+                            </div>  
+                          
+                          
+                        <div class="next">
+                          <a class="nextbtn" href="#section3" >Next</a>
+                        </div>
+                      </div> 
+
+                      <div class="form-group" id="section3">
+                              <label for="Profession" class="descHeading">What is your city anyway ? * </label>
+                              <div class="subHeading">Eg Enugu, Ibadan</div>
+                              
+                              <div class="inputboxx" >
+                                   <input type="text" placeholder="Type your answer here" >
+                                  
+                              </div>
+                            
+                          <div class="next">
+                            <a class="nextbtn" href="#section4">Next</a>
+                          </div>
+                      </div>
+                      <div class="form-group" id="section4">
+                              <label for="Profession" class="descHeading">What is your first name ? * </label>
+                              
+                              <div class="inputboxx"  onclick="">  
+                                  <input type="text" placeholder="Type your answer here" >
+                              </div>
+                            
+                          <div class="next">
+                            <a class="nextbtn" href="#section5">Next</a>
+                          </div>  
+                      </div> 
+
+                      <div class="form-group" id="section5">
+                          <label for="Profession" class="descHeading">...and your last name ? * </label>
+                          
+                          <div class="inputboxx" >  
+                              <input type="text" placeholder="Type your answer here" >
+                          </div>
                         
-                    
+                        <div class="next">
+                          <a class="nextbtn" href="#section6">Next</a>
+                        </div>  
+                      </div> 
+
+                      <div class="form-group" id="section6">
+                          <label for="Profession" class="descHeading">What bank do you accept payments to ? * </label>
+                          <div class="subHeading">Chose as Many as are applicable</div>
+                          <div class="checkboxx" id="profSelect" onclick="">
+                                  <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                                    <input type="checkbox" >
+                                  </label>
+                                
+                          </div>
+                          
+                          <div class="checkboxx"  onclick="">
+                              <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                                <input type="checkbox" >
+                              </label>
+                            
+                          </div>
+                          <div class="checkboxx"  onclick="">
+                              <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                                <input type="checkbox" >
+                              </label>
+                            
+                          </div>  
+                          <div class="checkboxx"  onclick="">
+                              <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                                <input type="checkbox" >
+                              </label>
+                            
+                          </div> 
+                          <div class="checkboxx"  onclick="">
+                              <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                                <input type="checkbox" >
+                              </label>
+                            
+                        </div>
+                        <div class="checkboxx"  onclick="">
+                            <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                              <input type="checkbox" >
+                            </label>
+                          
+                        </div>
+                        <div class="checkboxx"  onclick="">
+                            <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                              <input type="checkbox" >
+                            </label>
+                          
+                        </div>  
+                        <div class="checkboxx"  onclick="">
+                            <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                              <input type="checkbox" >
+                            </label>
+                          
+                        </div> 
+                        <div class="checkboxx"  onclick="">
+                            <label class="profession"><span class="letters">A</span><span class="box-content">Technician</span>
+                              <input type="checkbox" >
+                            </label>
+                          
+                      </div>
+                      <div class="next">
+                        <a class="nextbtn" href="#section7">Next</a>
+                      </div>
+                      </div>
+                      <div class="form-group" id="section7">
+                          <label for="Profession" class="descHeading">...Payment Bank Account Name  * </label>
+                          <div class="subHeading">This is for identity verification purposes only</div>
+                          <div class="inputboxx"  onclick="">  
+                              <input type="text" placeholder="Type your answer here" >
+                          </div>
+                        
+                        <div class="next">
+                          <a class="nextbtn" href="#section8">Next</a>
+                        </div>  
+                      </div> 
+                      <div class="form-group" id="section8">
+                          <label for="Profession" class="descHeading">Payment Bank Account Number </label>
+                          <div class="inputboxx"  onclick="">  
+                              <input type="text" placeholder="Type your answer here" >
+                          </div>
+                        
+                        <div class="next">
+                          <a class="nextbtn" href="#section9">Next</a>
+                        </div>  
+                      </div> 
+                      <div class="form-group" id="section9">
+                          <label for="Profession" class="descHeading">Do you have a business name? </label>
+                          <div class="subHeading">If it isn't available please ignore</div>
+                          <div class="inputboxx"  onclick="">  
+                              <input type="text" placeholder="Type your answer here" >
+                          </div>
+                        
+                        <div class="next">
+                          <a class="nextbtn" href="#section10">Next</a>
+                        </div>  
+                      </div>
+                      
+                      <div class="form-group" id="section10">
+                          <label for="Profession" class="descHeading">Contact/Business Mail </label>
+                          <div class="subHeading">We promise to send you only informative business mails</div>
+                          <div class="inputboxx"  onclick="">  
+                              <input type="text" placeholder="Type your answer here" >
+                          </div>
+                        
+                        <div class="next">
+                          <a class="nextbtn" href="#section11">Next</a>
+                        </div>  
+                      </div>  
+                      <div class="form-group" id="section11">
+                          <label for="Profession" class="descHeading">Direct contact phone number </label>
+                          <div class="subHeading">We would have to call to verify your provided details..
+
+                            </div>
+                          <div class="inputboxx"  onclick="">  
+                              <input type="text" placeholder="Type your answer here" >
+                          </div>
+                        
+                        <div class="next">
+                          <a class="nextbtn" href="#section12">Next</a>
+                        </div>  
+                      </div>
+                      <div class="form-group" id="section12">
+                          <label for="Profession" class="descHeading">What's your Gender ? * </label>
+                          <div class="subHeading">Chose as Many as are applicable</div>
+                          <div class="checkboxx" id="" onclick="">
+                                  <label class="profession"><span class="letters">A</span><span class="box-content">Male</span>
+                                    <input type="checkbox" >
+                                  </label>
+                                
+                          </div>
+                          
+                          <div class="checkboxx"  onclick="">
+                              <label class="profession"><span class="letters">A</span><span class="box-content">Female</span>
+                                <input type="checkbox" >
+                              </label>
+                            
+                          </div>
+                          
+                          
+                      <div class="next">
+                        <a class="nextbtn" href="#section13">Next</a>
+                      </div>
+                      </div>  
+                      <div class="form-group" id="section13">
+                          <label for="Profession" class="descHeading">What's your age grade </label>
+                          <div class="subHeading">This is purely for internal research purposes and wouldn't be visible to your clients</div>
+                          <div class="" >  
+                              <select id="soflow" name="reason">
+                                  <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
+                                  <option>Select the available option</option>
+                                  <option>I hired someone from AtYourService</option>
+                                  <option>I got a client from AtYourService</option>
+                                  <option>Something else</option>
+                                </select>
+                          </div>
+                        
+                        <div class="next">
+                          <a class="nextbtn">Next</a>
+                        </div>  
+                      </div>
+                      <div class="form-group" id="section14">
+                          <label for="Profession" class="descHeading">How did you know about us </label>
+                          <div class="subHeading">We want to know who to thank</div>
+                          <div class=""  onclick="">  
+                              <select id="soflow" name="reason">
+                                  <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
+                                  <option>Select the available option</option>
+                                  <option>I hired someone from AtYourService</option>
+                                  <option>I got a client from AtYourService</option>
+                                  <option>Something else</option>
+                                </select>
+                          </div>
+                        
+                        <div class="next">
+                          <a class="nextbtn">Next</a>
+                        </div>  
+                      </div>
+                      
                     </form>
                 </div>
               
@@ -95,28 +376,324 @@
       
   
   </div>
+  <script>
+
+   
+      let nextBtn = document.querySelectorAll('.next .nextbtn')
+      console.log(nextBtn)
+      let secOne = document.querySelectorAll('#section1 .checkboxx input')
+      
+      Array.from(secOne).forEach(element => {
+        
+        element.addEventListener('click', function(e){
+          let checked = false;
+          let content = element.parentElement.querySelector('.box-content').textContent
+          element.value = content;
+          Array.from(secOne).forEach(e => {
+            if(e.checked)
+            {
+              checked = true;
+            }
+          });
+          if(checked)
+          {
+            nextBtn[0].classList.add('show-next')
+            nextBtn[0].classList.remove('hide-next')
+          }
+          else{
+            nextBtn[0].classList.add('hide-next')
+            nextBtn[0].classList.remove('show-next')
+          }
+          console.log(element)
+        })
+      }); 
+        
+      let secTwo = document.querySelectorAll('#section2 .checkboxx input')
+      
+      Array.from(secTwo).forEach(element => {
+        
+        element.addEventListener('click', function(e){
+          let checked = false;
+          let content = element.parentElement.querySelector('.box-content').textContent
+          element.value = content;
+          Array.from(secTwo).forEach(e => {
+            if(e.checked)
+            {
+              checked = true;
+            }
+          });
+          if(checked)
+          {
+            nextBtn[1].classList.add('show-next')
+            nextBtn[1].classList.remove('hide-next')
+          }
+          else{
+            nextBtn[1].classList.add('hide-next')
+            nextBtn[1].classList.remove('show-next')
+          }
+          console.log(element)
+        })
+      }); 
+      
+   
+      let secThree = document.querySelector('#section3 .inputboxx input')
+        
+        secThree.addEventListener('keyup', function(e){
+          let keypress = false;
+          let content = secThree.value
+          console.log(e)
+          if(secThree.value !== null)
+          {
+            keypress = true;
+          }
+          else{
+            keypress = false;
+          }
+            
+          if(keypress && (secThree.value !== null)){
+            nextBtn[2].classList.add('show-next')
+            nextBtn[2].classList.remove('hide-next')
+            console.log(keypress)
+          }
+          else{
+            nextBtn[2].classList.add('hide-next')
+            nextBtn[2].classList.remove('show-next')
+          }
+      })
+
+      let secFour = document.querySelector('#section4 .inputboxx input')
+        
+        secFour.addEventListener('keypress', function(e){
+          let keypress = false;
+          let content = secThree.value
+          console.log(e)
+          if(secFour.value !== null)
+          {
+            
+            keypress = true;
+            nextBtn[3].classList.add('show-next')
+            nextBtn[3].classList.remove('hide-next')
+            console.log(keypress)
+          }
+          else{
+            nextBtn[3].classList.add('hide-next')
+            nextBtn[3].classList.remove('show-next')
+          }
+      })
+
+      let secFive = document.querySelector('#section5 .inputboxx input')
+        
+        secFive.addEventListener('keypress', function(e){
+          let keypress = false;
+          let content = secThree.value
+          console.log(e)
+          if(secFive.value !== null)
+          {
+            
+            keypress = true;
+            nextBtn[4].classList.add('show-next')
+            nextBtn[4].classList.remove('hide-next')
+            console.log(keypress)
+          }
+          else{
+            nextBtn[4].classList.add('hide-next')
+            nextBtn[4].classList.remove('show-next')
+          }
+      })
+
+      let secSix = document.querySelectorAll('#section6 .checkboxx input')
+      
+      Array.from(secSix).forEach(element => {
+        
+        element.addEventListener('click', function(e){
+          let checked = false;
+          let content = element.parentElement.querySelector('.box-content').textContent
+          element.value = content;
+          Array.from(secSix).forEach(e => {
+            if(e.checked)
+            {
+              checked = true;
+            }
+          });
+          if(checked)
+          {
+            nextBtn[5].classList.add('show-next')
+            nextBtn[5].classList.remove('hide-next')
+          }
+          else{
+            nextBtn[5].classList.add('hide-next')
+            nextBtn[5].classList.remove('show-next')
+          }
+          console.log(element)
+        })
+      }); 
+      
+   
+
+      let secSeven = document.querySelector('#section7 .inputboxx input')
+        
+        secSeven.addEventListener('keypress', function(e){
+          let keypress = false;
+          let content = secThree.value
+          console.log(e)
+          if(secSeven.value !== null)
+          {
+            
+            keypress = true;
+            nextBtn[6].classList.add('show-next')
+            nextBtn[6].classList.remove('hide-next')
+            console.log(keypress)
+          }
+          else{
+            nextBtn[6].classList.add('hide-next')
+            nextBtn[6].classList.remove('show-next')
+          }
+      })
+
+      let secEight = document.querySelector('#section8 .inputboxx input')
+        
+        secEight.addEventListener('keypress', function(e){
+          let keypress = false;
+          let content = secThree.value
+          console.log(e)
+          if(secEight.value !== null)
+          {
+            
+            keypress = true;
+            nextBtn[7].classList.add('show-next')
+            nextBtn[7].classList.remove('hide-next')
+            console.log(keypress)
+          }
+          else{
+            nextBtn[7].classList.add('hide-next')
+            nextBtn[7].classList.remove('show-next')
+          }
+      })
+
+      let secNine = document.querySelector('#section9 .inputboxx input')
+        
+        secNine.addEventListener('keypress', function(e){
+          let keypress = false;
+          let content = secThree.value
+          console.log(e)
+          if(secNine.value !== null)
+          {
+            
+            keypress = true;
+            nextBtn[8].classList.add('show-next')
+            nextBtn[8].classList.remove('hide-next')
+            console.log(keypress)
+          
+          }
+          else{
+            nextBtn[8].classList.add('hide-next')
+            nextBtn[8].classList.remove('show-next')
+          }
+      })
+
+      let secTen = document.querySelector('#section10 .inputboxx input')
+        
+        secTen.addEventListener('keypress', function(e){
+          let keypress = false;
+          let content = secThree.value
+          console.log(e)
+          if(secTen.value !== null)
+          {
+            
+            keypress = true;
+            nextBtn[9].classList.add('show-next')
+            nextBtn[9].classList.remove('hide-next')
+            console.log(keypress)
+          }
+          else{
+            nextBtn[9].classList.add('hide-next')
+            nextBtn[9].classList.remove('show-next')
+          }
+      })
+
+      let secEleven = document.querySelector('#section11 .inputboxx input')
+        
+        secEleven.addEventListener('keypress', function(e){
+          let keypress = false;
+          let content = secThree.value
+          console.log(e)
+          if(secTen.value !== null)
+          {
+            
+            keypress = true;
+            nextBtn[10].classList.add('show-next')
+            nextBtn[10].classList.remove('hide-next')
+            console.log(keypress)
+          }
+          else{
+            nextBtn[10].classList.add('hide-next')
+            nextBtn[10].classList.remove('show-next')
+          }
+      })
+
+      let secTwelve = document.querySelectorAll('#section12 .checkboxx input')
+      
+      Array.from(secTwelve).forEach(element => {
+        
+        element.addEventListener('click', function(e){
+          let checked = false;
+          let content = element.parentElement.querySelector('.box-content').textContent
+          element.value = content;
+          alert("hi")
+          Array.from(secTwelve).forEach(e => {
+            if(e.checked)
+            {
+              checked = true;
+            }
+          });
+          if(checked)
+          {
+            nextBtn[11].classList.add('show-next')
+            nextBtn[11].classList.remove('hide-next')
+          }
+          else{
+            nextBtn[11].classList.add('hide-next')
+            nextBtn[11].classList.remove('show-next')
+          }
+          console.log(element)
+        })
+      }); 
+      
+  </script>
 
   <script>
       var opt = document.getElementById('profSelect')
-      opt.addEventListener('click', function(e){
+       function toggle(e){
         var optInput = document.querySelector('#profSelect input')
-        if(optInput.checked != true){
-            console.log(optInput);
-            console.log("I was init false");
 
-            optInput.setAttribute('checked', true)
-        }
-        else{
+        
+        if(optInput.checked != false){
             console.log(optInput);
-            console.log("I was init true");
+           
+
             optInput.setAttribute('checked', false)
+        }
+        else if(optInput.checked != true){
+            console.log(optInput);
+            optInput.setAttribute('checked', true)
             
         }
-      })
+        console.log(optInput)
+      }
 </script>
   
+<script>
+
+let alp = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', '0', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y','Z']
+</script>  
    
-</body>
+</body><select id="soflow" name="reason">
+    <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
+    <option>Select an Option</option>
+    <option>I hired someone from AtYourService</option>
+    <option>I got a client from AtYourService</option>
+    <option>Something else</option>
+  </select>
 
 
 
@@ -124,42 +701,55 @@
   const navbar = document.getElementById("navAYS")
   const navform = document.getElementById("nav_search")
   const navauth = document.getElementById("auth")
+  let scrolled = false; 
   window.onscroll = function(){
-    if ((document.documentElement.scrollTop >= 100) && (window.innerWidth > 414) ) {
+    scrolled= true;   
       navbar.classList.add('colored_nav')
       navbar.classList.remove('transparent_nav')
-      
       navform.classList.add('disp')
       navform.classList.remove('hide')
       navauth.classList.add('hide')
       navauth.classList.remove('disp')
-      
-    } 
     
-    else {
-      navbar.classList.add('transparent_nav')
-      navbar.classList.remove('colored_nav')
-      navform.classList.remove('disp')
-      navform.classList.add('hide')
-      navauth.classList.remove('hide') 
-      navauth.classList.add('disp')
-     
-    }
-
-    if ((document.documentElement.scrollTop >= 100)) {
-      navbar.classList.add('colored_nav')
-      navbar.classList.remove('transparent_nav')
-      
-      
-    } 
-    const y = document.documentElement.scrollTop
+      let y = document.documentElement.scrollTop
     console.log('the value of y is ' + y);
-
   }
+  if(scrolled){
+    navbar.classList.add('transparent_nav')
+    navbar.classList.remove('colored_nav')
+    navform.classList.remove('disp')
+    navform.classList.add('hide')
+    navauth.classList.remove('hide') 
+    navauth.classList.add('disp')
 
-  if(window.innerWidth < 500){
-    navbar.classList.remove('fixed-top')
+    scrolled = false;
   }
+  // const y = document.documentElement.scrollTop;
+  // console.log(y)
+  
+  // y.addEventListener('scroll', function(){
+  
+  // })
+  
+    
+    // else {
+    
+     
+    // }
+
+    // if ((document.documentElement.scrollTop >= 100)) {
+    //   navbar.classList.add('colored_nav')
+    //   navbar.classList.remove('transparent_nav')
+      
+      
+    // } 
+ 
+
+  
+
+  // if(window.innerWidth < 500){
+  //   navbar.classList.remove('fixed-top')
+  // }
 </script>
 
 

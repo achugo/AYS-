@@ -1915,6 +1915,8 @@ fieldset {
 
 .borderadius10{
     border-radius: 10px !important;
+    background-color: transparent !important;
+    color: white;
 }
 
 .result0 {
@@ -2048,32 +2050,178 @@ text-align: left;
  .checkboxx{
     color: rgb(48, 91, 133);
     background-color: rgba(48, 91, 133, 0.1);
-    box-shadow: rgba(48, 91, 133, 0.8) 0px 0px 0px 2px inset;
+    box-shadow: rgba(48, 91, 133, 0.8) 0px 0px 0px 1px inset;
     cursor: pointer;
+    position: relative;
     opacity: 1;
-    will-change: opacity;
+    padding-top: 7px;
+    padding-left: 7px;
+    margin-bottom: 7px;
+    max-width: 340px;
     height: auto;
     border-radius: 4px;
     animation: 0.25s ease 0s 2 normal none running qNIWx;
  }
 
+ .checkboxx label {
+    width: 100%;
+    
+   
+ }
+
+ .inputboxx{
+    
+    
+    cursor: pointer;
+    position: relative;
+    opacity: 1;
+    padding-top: 7px;
+    padding-left: 7px;
+    margin-bottom: 7px;
+    height: auto;
+ 
+    animation: 0.25s ease 0s 2 normal none running qNIWx;
+ }
+
+ .inputboxx label {
+    width: 100%;
+    
+   
+ }
  .checkboxx input[type="checkbox"]{
-    width: 20%;
+    content: "" !important;
+    width: 100%;
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    content: "nigga";
+    left: 43%;
     color: #495057;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    position: absolute;
+    z-index: 1 !important;
+
+}
+.inputboxx input[type="text"]{
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    color: rgb(48, 91, 133);
+    -webkit-appearance: none;
+    transform: translateZ(0px);
+    font-size: 30px;
+    line-height: 38px;
+    -webkit-font-smoothing: antialiased;
+    padding: 0px 0px 8px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    outline: none;
+    border-radius: 0px;
+    transition: box-shadow 0.2s ease 0s;
+    background: none;
+}
+a.nextbtn:hover{
+    text-decoration: none;
+}
+.checkboxx input[type="checkbox"]::after{
+    background-color: blue;
+}
+
+.letters{
+    font-size: 1.0rem;
+    display: inline-block;
+    margin-right: 8px;
+    margin-top: -10px;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: 300;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 3px 12px;
+    border-radius: 2px;
+    border: 1px solid;
+}
+
+.descHeading{
+    font-weight: unset;
+    letter-spacing: 2px;
+    font-size: 24px;
+    line-height: 32px;
+    color: rgb(32, 156, 255)
+}
+
+.subHeading{
+    font-weight: unset;
+    font-size: 20px;
+    line-height: 28px;
+    color: rgb(32, 156, 255);
+    opacity: 0.7;
+    margin: 0px;
+}
+
+.box-content{
+    display: inline-block;
+    position: absolute;
+    top: 20%;
+}
+.nextbtn{
+    position: relative;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    width: 20%;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 12px 0px;
+    min-height: 40px;
+    color: rgb(214, 212, 212);
+    background-color: rgb(57, 56, 56);
+    transition: background-color 0.2s ease 0s, color 0.2s ease 0s, border-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    padding: 6px 14px;
+    border-color: transparent;
+    border-radius: 4px;
+    display: none;
 
 }
 
-.checkboxx input[type="checkbox"]::after{
-    background-color: blue;
+.hide-next{
+    display: none
+}
+
+.show-next{
+    display: block;
+}
+
+.borderadius10 form .form-group{
+    padding-top:40% ;
+}
+
+.typeform-bg{
+    background: url(../images/bg2.png);
+    width: 100%;
+    /* height: auto; */
+    position:relative;
+   
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* max-height: 650px; */
+    min-height: 100%;
+    bottom:0;
 }
