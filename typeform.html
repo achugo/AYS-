@@ -149,7 +149,7 @@ html{
                               <div class="subHeading">Eg Enugu, Ibadan</div>
                               
                               <div class="inputboxx" >
-                                   <input type="text" placeholder="Type your answer here" >
+                                   <input type="text" placeholder="Type your answer here" value="" >
                                   
                               </div>
                             
@@ -161,7 +161,7 @@ html{
                               <label for="Profession" class="descHeading">4<i class="fa fa-arrow-right"></i>What is your first name ? * </label>
                               
                               <div class="inputboxx"  onclick="">  
-                                  <input type="text" placeholder="Type your answer here" >
+                                  <input type="text" placeholder="Type your answer here" value="">
                               </div>
                             
                           <div class="next">
@@ -173,7 +173,7 @@ html{
                           <label for="Profession" class="descHeading">5<i class="fa fa-arrow-right"></i>...and your last name ? * </label>
                           
                           <div class="inputboxx" >  
-                              <input type="text" placeholder="Type your answer here" >
+                              <input type="text" placeholder="Type your answer here" value="">
                           </div>
                         
                         <div class="next">
@@ -257,7 +257,7 @@ html{
                       <div class="form-group" id="section8">
                           <label for="Profession" class="descHeading">8<i class="fa fa-arrow-right"></i>Payment Bank Account Number </label>
                           <div class="inputboxx"  onclick="">  
-                              <input type="text" placeholder="Type your answer here" >
+                              <input type="text" placeholder="Type your answer here" value="">
                           </div>
                         
                         <div class="next">
@@ -268,7 +268,7 @@ html{
                           <label for="Profession" class="descHeading">9<i class="fa fa-arrow-right"></i>Do you have a business name? </label>
                           <div class="subHeading">If it isn't available please ignore</div>
                           <div class="inputboxx"  onclick="">  
-                              <input type="text" placeholder="Type your answer here" >
+                              <input type="text" placeholder="Type your answer here" value="">
                           </div>
                         
                         <div class="next">
@@ -280,7 +280,7 @@ html{
                           <label for="Profession" class="descHeading">10<i class="fa fa-arrow-right"></i>Contact/Business Mail </label>
                           <div class="subHeading">We promise to send you only informative business mails</div>
                           <div class="inputboxx"  onclick="">  
-                              <input type="text" placeholder="Type your answer here" >
+                              <input type="text" placeholder="Type your answer here" value="">
                           </div>
                         
                         <div class="next">
@@ -293,7 +293,7 @@ html{
 
                             </div>
                           <div class="inputboxx"  onclick="">  
-                              <input type="text" placeholder="Type your answer here" >
+                              <input type="text" placeholder="Type your answer here" value="">
                           </div>
                         
                         <div class="next">
@@ -381,7 +381,9 @@ html{
            
        </div>
        
-
+    <footer>
+        
+    </footer>
        
       
   
@@ -452,7 +454,7 @@ html{
           let keypress = false;
           let content = secThree.value
           console.log(e)
-          if(secThree.value !== null)
+          if(secThree.value.length > 0)
           {
             keypress = true;
           }
@@ -460,7 +462,7 @@ html{
             keypress = false;
           }
             
-          if(keypress && (secThree.value !== null)){
+          if(keypress){
             nextBtn[2].classList.add('show-next')
             nextBtn[2].classList.remove('hide-next')
             console.log(keypress)
