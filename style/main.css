@@ -340,7 +340,7 @@ padding-left: 8px;
     }
 
     .margintop200 {
-        margin-top: 8vh !important;
+        margin-top: 10vh !important;
     }
 
     .download_app {
@@ -366,7 +366,7 @@ padding-left: 8px;
     }
 
     .margintop200 {
-        margin-top: 8vh !important;
+        margin-top: 10vh !important;
     }
 
     .download_app {
@@ -460,12 +460,12 @@ padding-left: 8px;
 
 @media(max-width:768px){
     .margintop200{
-        margin-top: 13vh !important;
+        margin-top: 10vh !important;
     }
 }
 @media(max-width:500px){
     .margintop200{
-        margin-top: 12vh !important;
+        margin-top: 10vh !important;
     }
 }
 .gold {
@@ -2239,4 +2239,8 @@ a.nextbtn:hover{
     .growBiz{
         display: none;
     }
+}
+
+.no-space{
+    margin-top: 5vh !important;
 }
