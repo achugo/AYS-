@@ -2138,6 +2138,7 @@ text-align: left;
 }
 a.nextbtn:hover{
     text-decoration: none;
+    color: #fff;
 }
 .checkboxx input[type="checkbox"]::after{
     background-color: blue;
