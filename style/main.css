@@ -2056,6 +2056,83 @@ text-align: left;
      background-color: #ccc;
  }
 
+ 
+
+ .checkbox{
+    color: rgb(48, 91, 133);
+    background-color: rgba(48, 91, 133, 0.1);
+    box-shadow: rgba(48, 91, 133, 0.8) 0px 0px 0px 1px inset;
+    cursor: pointer;
+    position: relative;
+    opacity: 1;
+    padding-top: 7px;
+    padding-left: 7px;
+    margin-bottom: 7px;
+    max-width: 340px;
+    height: auto;
+    border-radius: 4px;
+    animation: 0.25s ease 0s 2 normal none running qNIWx;
+ }
+ .checkbox input[type="checkbox"] {
+    opacity: 0;
+    display: none;
+}
+
+.checkbox label {
+    position: relative;
+    display: inline-block;
+    width: 94%;
+    
+    /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+    padding-left: 22px;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+    position: absolute;
+    content: "";
+    
+    
+    /*Needed for the line-height to take effect*/
+    display: inline-block;
+}
+
+
+
+/*Checkmark of the fake checkbox*/
+.checkbox label::after {
+    height: 9px;
+    width: 15px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(-45deg);
+    top: 4px;
+    right: 9px;
+}
+
+/*Hide the checkmark by default*/
+.checkbox input[type="checkbox"] + label::after {
+    content: none;
+}
+
+/*Unhide on the checked state*/
+.checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  .checkboxx{
     color: rgb(48, 91, 133);
     background-color: rgba(48, 91, 133, 0.1);
@@ -2100,6 +2177,7 @@ text-align: left;
  .checkboxx input[type="checkbox"]{
     content: "" !important;
     width: 100%;
+    opacity: 0;
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -2116,6 +2194,10 @@ text-align: left;
     z-index: 1 !important;
 
 }
+
+
+
+
 .inputboxx input[type="text"]{
     display: block;
     width: 100%;
@@ -2222,7 +2304,7 @@ a.nextbtn:hover{
 }
 
 .typeform-bg{
-    background: url(../images/bg2.png);
+    background: url(../images/better.svg);
     width: 100%;
     /* height: auto; */
     position:relative;
@@ -2244,4 +2326,25 @@ a.nextbtn:hover{
 
 .no-space{
     margin-top: 5vh !important;
+}
+
+footer.typeform{
+    background-color: #ededed;
+    opacity: 0.6;
+    margin-top: 1rem;
+    padding: 20px 0px 20px 0px !important;
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+    width: 100%
+}
+
+.marginbottom300{
+    margin-bottom: 300px;
+}
+
+.fa{
+    padding-left: 2% !important ;
+    padding-right: 2% !important;
+
 }
