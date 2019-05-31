@@ -36,7 +36,7 @@ html{
                        
                             <nav class="navbar navbar-expand-md fixed-top navbar-light one_hunnid" id="navAYS">
                               <div class="container">
-                                <div class="row" id="form-section" style="padding-left:23%">
+                                <div class="row signup_header" id="form-section">
                                   
                                 </div>
 
@@ -58,10 +58,10 @@ html{
             <div class="row">
                 <div class="col-xl-2"></div>
               <div class="col-xl-6">
-                <div class="search_form borderadius10">
-                    <form>
+                <div class=" borderadius10">
+                    <form id="typeForm">
                       <div class="form-group" id="section1">
-                            <label for="Profession" class="descHeading">1<i class="fa fa-arrow-right"></i>What's your Profession ? * </label>
+                            <label for="Profession" class="descHeading">1<i class="fa fa-arrow-right"></i>What's your Profession? * </label>
                             <div class="subHeading">Chose as Many as are applicable</div>
                             
                             <div class="checkbox">
@@ -83,7 +83,7 @@ html{
 
                       
                       <div class="form-group" id="section2">
-                            <label for="Profession" class="descHeading">2<i class="fa fa-arrow-right"></i>Preferred Client Location ? * </label>
+                            <label for="Profession" class="descHeading">2<i class="fa fa-arrow-right"></i>Preferred Client Location? * </label>
                             <div class="subHeading">Chose as Many as are applicable</div>
                             
                             <div class="checkbox">
@@ -91,7 +91,7 @@ html{
                                 <label for="checkbox_10">Anywhere</label>
                             </div> 
                             <div class="checkbox">
-                              <input type="checkbox" id="checkbox_1">
+                              <input type="checkbox" id="checkbox_11">
                               <label for="checkbox_11">My city</label>
                             </div>
                           
@@ -102,7 +102,7 @@ html{
                       </div> 
 
                       <div class="form-group" id="section3">
-                              <label for="Profession" class="descHeading">3<i class="fa fa-arrow-right"></i>What is your city anyway ? * </label>
+                              <label for="Profession" class="descHeading">3<i class="fa fa-arrow-right"></i>What is your city anyway? * </label>
                               <div class="subHeading">Eg Enugu, Ibadan</div>
                               
                               <div class="inputboxx" >
@@ -115,7 +115,7 @@ html{
                           </div>
                       </div>
                       <div class="form-group" id="section4">
-                              <label for="Profession" class="descHeading">4<i class="fa fa-arrow-right"></i>What is your first name ? * </label>
+                              <label for="Profession" class="descHeading">4<i class="fa fa-arrow-right"></i>What is your first name? * </label>
                               
                               <div class="inputboxx"  onclick="">  
                                   <input type="text" placeholder="Type your answer here" value="">
@@ -127,7 +127,7 @@ html{
                       </div> 
 
                       <div class="form-group" id="section5">
-                          <label for="Profession" class="descHeading">5<i class="fa fa-arrow-right"></i>...and your last name ? * </label>
+                          <label for="Profession" class="descHeading">5<i class="fa fa-arrow-right"></i>...and your last name? * </label>
                           
                           <div class="inputboxx" >  
                               <input type="text" placeholder="Type your answer here" value="">
@@ -139,7 +139,7 @@ html{
                       </div> 
 
                       <div class="form-group" id="section6">
-                          <label for="Profession" class="descHeading">6<i class="fa fa-arrow-right"></i>What bank do you accept payments to ? * </label>
+                          <label for="Profession" class="descHeading">6<i class="fa fa-arrow-right"></i>What bank do you accept payments to? * </label>
                           <div class="subHeading">Chose as Many as are applicable</div>
                           
                           
@@ -177,7 +177,7 @@ html{
                       <div class="form-group" id="section8">
                           <label for="Profession" class="descHeading">8<i class="fa fa-arrow-right"></i>Payment Bank Account Number </label>
                           <div class="inputboxx"  onclick="">  
-                              <input type="text" placeholder="Type your answer here" value="">
+                              <input type="text" required placeholder="Type your answer here" value="">
                           </div>
                         
                         <div class="next">
@@ -186,9 +186,9 @@ html{
                       </div> 
                       <div class="form-group" id="section9">
                           <label for="Profession" class="descHeading">9<i class="fa fa-arrow-right"></i>Do you have a business name? </label>
-                          <div class="subHeading">If it isn't available please ignore</div>
+                          <div class="subHeading">If it isn't available, Enter "Nil"</div>
                           <div class="inputboxx"  value="">  
-                              <input type="text" placeholder="Type your answer here" value="">
+                              <input type="email" required placeholder="Type your answer here" value="">
                           </div>
                         
                         <div class="next">
@@ -200,7 +200,7 @@ html{
                           <label for="Profession" class="descHeading">10<i class="fa fa-arrow-right"></i>Contact/Business Mail </label>
                           <div class="subHeading">We promise to send you only informative business mails</div>
                           <div class="inputboxx"  onclick="">  
-                              <input type="text" placeholder="Type your answer here" value="">
+                              <input type="email" placeholder="Type your answer here" value="">
                           </div>
                         
                         <div class="next">
@@ -213,7 +213,7 @@ html{
 
                             </div>
                           <div class="inputboxx" >  
-                              <input type="text" placeholder="Type your answer here" value="">
+                              <input type="tel" required placeholder="Type your answer here" value="">
                           </div>
                         
                         <div class="next">
@@ -221,7 +221,7 @@ html{
                         </div>  
                       </div>
                       <div class="form-group" id="section12">
-                          <label for="Profession" class="descHeading">12<i class="fa fa-arrow-right"></i>What's your Gender ? * </label>
+                          <label for="Profession" class="descHeading">12<i class="fa fa-arrow-right"></i>What's your Gender? * </label>
                           <div class="subHeading">Chose as Many as are applicable</div>
                             <div class="checkbox">
                               <input type="checkbox" id="checkbox__1">
@@ -276,11 +276,12 @@ html{
                                 </select>
                           </div>
                         
-                        <div class="next">
-                          <a class="nextbtn">Next</a>
+                        <div class="next age-padding">
+                          <button type="submit" class="submit-btn">SUBMIT</button>
                         </div>  
                       </div>
                       
+                       
                     </form>
                 </div>
               
@@ -311,13 +312,15 @@ html{
   </div>
   <script>
 
-   
+      let mainForm = document.querySelector('#typeForm');
+      mainForm.addEventListener('submit', function(event){
+        e.preventDefault();
+      })
       let nextBtn = document.querySelectorAll('.next .nextbtn')
-      complete = 1;
+      let submitBtn = document.querySelector('.submit-btn')
+      complete = 0;
       partial = 0;
       var completed = "0%";
-      let completion = document.querySelector('.progress .progress-bar')
-      console.log(nextBtn)
       let secOne = document.querySelectorAll('#section1 .checkbox input')
       let secTwo = document.querySelectorAll('#section2 .checkbox input')
       let secThree = document.querySelector('#section3 .inputboxx input')
@@ -332,10 +335,9 @@ html{
       let secTwelve = document.querySelectorAll('#section12 .checkbox input')
       let secThirteen = document.querySelector("#section13 select")
       let secFourteen = document.querySelector("#section14 select")
-
-      let box1 = false;
      
-      function displaySubmit(s1, s2, s3, s4, s5, s6, s6, s7, s8, s9, s10, s11, s12, s13, s14 ){
+      function displaySubmit(s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14 ){
+        
                               complete = 0;
                               isTrue = false;
                               //First section checker
@@ -428,6 +430,7 @@ html{
                               //Ninth section checker
                               
                                 if(s9.value.length > 0){
+                                  
                                   isTrue = true
                                 }
                              
@@ -447,14 +450,14 @@ html{
                               }
                               //Eleventh section checker
                               
-                              // if(s11.value.length !== null){
-                              //     isTrue = true
-                              //   }
+                              if(s11.value.length > 0){
+                                  isTrue = true
+                                }
                               
-                              // if(isTrue){
-                              //   complete += 1;
-                              //   isTrue = false
-                              // }
+                              if(isTrue){
+                                complete += 1;
+                                isTrue = false
+                              }
                               //Twelveth section checker
                               Array.from(s12).forEach(e => {
                                 if(e.checked)
@@ -475,22 +478,151 @@ html{
                                 complete += 1;
                                 isTrue = false
                               }
+
+                               //Fourteenth section checker
+                               if(s14.selectedIndex !== 0){
+                                isTrue = true;
+                              }
+                              if(isTrue){
+                                complete += 1;
+                                isTrue = false
+                              }
+
+                              switch (complete) {
+        
+                                case 1: 
+                                    completed = "7%"
+                                    completion.style.width = "7%"
+                                    submitBtn.classList.add('hide-next')
+                                    submitBtn.classList.remove('show-next')
+                                    
+                                  break;
+                              
+                                  case 2: 
+                                    completed = "14%"
+                                    completion.style.width= "14%"
+                                    submitBtn.classList.add('hide-next')
+                                    submitBtn.classList.remove('show-next')
+                                  break;
+
+                                  case 3: 
+                                    completed = "21%"
+                                    completion.style.width= "21%"
+                                    submitBtn.classList.add('hide-next')
+                                    submitBtn.classList.remove('show-next')
+                                  break;
+
+                                  case 4: 
+                                    completed = "28%"
+                                    completion.style.width= "28%"
+                                    submitBtn.classList.add('hide-next')
+                                    submitBtn.classList.remove('show-next')
+                                  break;
+
+                                  case 5: 
+                                    completed = "35%"
+                                    completion.style.width= "35%"
+                                    submitBtn.classList.add('hide-next')
+                                    submitBtn.classList.remove('show-next')
+                                  break;
+
+                                  case 6: 
+                                    completed = "42%"
+                                    completion.style.width= "42%"
+                                    submitBtn.classList.add('hide-next')
+                                    submitBtn.classList.remove('show-next')
+                                  break;
+
+                                  case 7: 
+                                    completed = "49%"
+                                    completion.style.width= "49%"
+                                    submitBtn.classList.add('hide-next')
+                                    submitBtn.classList.remove('show-next')
+                                  break;
+
+                                  case 8: 
+                                    completed = "56%"
+                                    completion.style.width= "56%"
+                                    submitBtn.classList.add('hide-next')
+                                    submitBtn.classList.remove('show-next')
+                                  break;
+
+                                  case 9: 
+                                    completed = "63%"
+                                    completion.style.width= "63%"
+                                    submitBtn.classList.add('hide-next')
+                                    submitBtn.classList.remove('show-next')
+                                  break;
+
+                                  case 10: 
+                                    completed = "70%"
+                                    completion.style.width= "70%"
+                                    submitBtn.classList.add('hide-next')
+                                    submitBtn.classList.remove('show-next')
+                                  break;
+
+                                  case 11: 
+                                    completed = "77%"
+                                    completion.style.width= "77%"
+                                    submitBtn.classList.add('hide-next')
+                                    submitBtn.classList.remove('show-next')
+                                  break;
+
+                                  case 12: 
+                                    completed = "84%"
+                                    completion.style.width= "84%"
+                                    submitBtn.classList.add('hide-next')
+                                    submitBtn.classList.remove('show-next')
+                                  break;
+
+                                  case 13: 
+                                    completed = "91%"
+                                    completion.style.width= "91%"
+                                    submitBtn.classList.add('hide-next')
+                                    submitBtn.classList.remove('show-next')
+                                  break;
+
+                                  case 14: 
+                                    completed = "100%"
+                                    completion.style.width= "100%"
+                                    submitBtn.classList.add('show-next')
+                                    submitBtn.classList.remove('hide-next')
+                                  break;
+                                default:
+                                  completed = ""
+                                  break;
+                              }
+                              
                               
                               //Done checking
                               if(complete === 14)
                               {
+                                
+                                
                                 return true;
                               }
+                             
                               return false;
                             
                               
-        }        displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
+        }
+        displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
                             secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
-
-                            
-      
+      // switch (complete) {
+      //   case 0:
+      //     complete = 0
+      //     break;
+      //     case 1:
+      //     complete = 7.14285714286
+      //     break;
+      //     case 2:
+      //     complete = 14.2857142857
+      //     break;
+      //   default:
+      //     break;
+      // }      
+      let completion = document.querySelector('.progress .progress-bar')
                     
-      
       Array.from(secOne).forEach(element => {
         
         element.addEventListener('click', function(e){
@@ -803,7 +935,9 @@ html{
           }
           displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
                             secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
+              completion.textContent = completed; 
         })
+       
       }); 
 
       
@@ -823,22 +957,30 @@ html{
           }
           displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
                             secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
+          completion.textContent = completed;                   
+      })
+
+      secFourteen.addEventListener('change', function(e){
+        let selected = false;
+        if(this.value != null){
+          selected = true;
+        }
+        
+          displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
+                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
+          completion.textContent = completed;                   
       })
       
-      
-
   </script>
 
   <script>
       var opt = document.getElementById('profSelect')
        function toggle(e){
         var optInput = document.querySelector('#profSelect input')
-
         
         if(optInput.checked != false){
             console.log(optInput);
            
-
             optInput.setAttribute('checked', false)
         }
         else if(optInput.checked != true){
@@ -846,14 +988,12 @@ html{
             optInput.setAttribute('checked', true)
             
         }
-        console.log(optInput)
+        
       }
-
      
 </script>
   
 <script>
-
 let alp = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', '0', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y','Z']
 </script>  
    
@@ -874,12 +1014,12 @@ let alp = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
      
       let yscroll = document.documentElement.scrollTop;
       let y = Number(yscroll)
-      // console.log(yscroll)
+      console.log(yscroll)
       
-      if (yscroll > 100 && yscroll < 330) {
+      if (yscroll > 100 && yscroll < 470) {
         formSection.innerHTML = document.querySelector("#section1 .descHeading").innerHTML
       }
-      else if(yscroll > 329 && yscroll < 580){
+      else if(yscroll > 469 && yscroll < 580){
         formSection.innerHTML = document.querySelector("#section2 .descHeading").innerHTML;
       }
       else if(yscroll > 690 && yscroll < 880){
@@ -926,39 +1066,11 @@ let alp = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
     navbar.classList.add('transparent_nav')
     navbar.classList.remove('colored_nav')
     
-
     scrolled = false;
   }
-  // const y = document.documentElement.scrollTop;
-  // console.log(y)
-  
-  // y.addEventListener('scroll', function(){
-  
-  // })
-  
-    
-    // else {
-    
-     
-    // }
-
-    // if ((document.documentElement.scrollTop >= 100)) {
-    //   navbar.classList.add('colored_nav')
-    //   navbar.classList.remove('transparent_nav')
-      
-      
-    // } 
- 
-
-  
-
-  // if(window.innerWidth < 500){
-  //   navbar.classList.remove('fixed-top')
-  // }
 </script>
 
 
 
 <script src="storage.js"></script>
 </html>
- 
