@@ -2459,3 +2459,9 @@ footer.typeform{
 .age-padding{
     padding-top: 15px;
 }
+
+.disabled {
+    opacity: 0.5;
+}
+
+/** end of typeform **/

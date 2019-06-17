@@ -313,6 +313,7 @@ html{
 
    
       let nextBtn = document.querySelectorAll('.next .nextbtn')
+      let btn0 = nextBtn[0];
       complete = 1;
       partial = 0;
       var completed = "0%";
@@ -489,39 +490,72 @@ html{
 
                             
       
-                    
-      
-      Array.from(secOne).forEach(element => {
+        function checkbox(sectionID, btnID){
+          Array.from(sectionID).forEach(element => {
         
-        element.addEventListener('click', function(e){
-          let checked = false;
-          let content = element.parentElement.querySelector('#section1 .checkbox label').textContent
-          element.value = content;
-          Array.from(secOne).forEach(e => {
-            if(e.checked)
-            {
-              checked = true;
+              element.addEventListener('click', function(e){
+                let checked = false;
+                let content = element.parentElement.querySelector(sectionID + '.checkbox label').textContent
+                element.value = content;
+                Array.from(sectionID).forEach(e => {
+                  if(e.checked)
+                  {
+                    checked = true;
+                    
+                  }
+                  
+                });
+                if(checked)
+                {
+                  btnID.classList.add('show-next')
+                  btnID.classList.remove('hide-next')
+                }
+                else{
+                  btnID.classList.add('hide-next')
+                  btnID.classList.remove('show-next')
+                }
+                displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
+                                  secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
+                completion.textContent = completed;
+              })
+          }); 
+
+
+
+        }  
+        checkbox(secOne, btn0);         
+      
+      // Array.from(secOne).forEach(element => {
+        
+      //   element.addEventListener('click', function(e){
+      //     let checked = false;
+      //     let content = element.parentElement.querySelector('#section1 .checkbox label').textContent
+      //     element.value = content;
+      //     Array.from(secOne).forEach(e => {
+      //       if(e.checked)
+      //       {
+      //         checked = true;
               
-            }
+      //       }
             
-          });
-          if(checked)
-          {
-            nextBtn[0].classList.add('show-next')
-            nextBtn[0].classList.remove('hide-next')
-          }
-          else{
-            nextBtn[0].classList.add('hide-next')
-            nextBtn[0].classList.remove('show-next')
-          }
-          displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
-                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
+      //     });
+      //     if(checked)
+      //     {
+      //       nextBtn[0].classList.add('show-next')
+      //       nextBtn[0].classList.remove('hide-next')
+      //     }
+      //     else{
+      //       nextBtn[0].classList.add('hide-next')
+      //       nextBtn[0].classList.remove('show-next')
+      //     }
+      //     displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
+      //                       secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
 
                                   
      
-      completion.textContent = completed;  
-        })
-      }); 
+      // completion.textContent = completed;  
+      //   })
+      // }); 
         
       
       Array.from(secTwo).forEach(element => {

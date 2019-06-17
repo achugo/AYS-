@@ -1885,3 +1885,6 @@ a.move-top span:hover {
     background-color: #fff
 }
 
+.disabled {
+    opacity: 0.5;
+}

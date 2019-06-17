@@ -242,20 +242,20 @@ html{
                           <div class="" >  
                               <select id="soflow" name="reason">
                                   <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
-                                  <option>Select the available option</option>
-                                  <option>Below 18</option>
-                                  <option>18 - 21 </option>
-                                  <option>22 -25</option>
-                                  <option>26 - 29</option>
-                                  <option>30 -35</option>
-                                  <option>36 -40</option>
-                                  <option>41 -45</option>
-                                  <option>46 -50</option>
-                                  <option>Above 50</option>
+                                  <option value="0">Select the available option</option>
+                                  <option value="1">Below 18</option>
+                                  <option value="2">18 - 21 </option>
+                                  <option value="3">22 -25</option>
+                                  <option value="4">26 - 29</option>
+                                  <option value="5">30 -35</option>
+                                  <option value="6">36 -40</option>
+                                  <option value="7">41 -45</option>
+                                  <option value="8">46 -50</option>
+                                  <option value="9">Above 50</option>
                                 </select>
                           </div>
                         
-                        <div class="next">
+                        <div class="next age-padding">
                           <a class="nextbtn" href="#section14">Next</a>
                         </div>  
                       </div>
@@ -310,183 +310,90 @@ html{
       
   
   </div>
-  <script>
+  <!-- <script>
 
       let mainForm = document.querySelector('#typeForm');
       mainForm.addEventListener('submit', function(event){
         e.preventDefault();
       })
       let nextBtn = document.querySelectorAll('.next .nextbtn')
+     
       let submitBtn = document.querySelector('.submit-btn')
       complete = 0;
       partial = 0;
       var completed = "0%";
-      let secOne = document.querySelectorAll('#section1 .checkbox input')
-      let secTwo = document.querySelectorAll('#section2 .checkbox input')
-      let secThree = document.querySelector('#section3 .inputboxx input')
-      let secFour = document.querySelector('#section4 .inputboxx input')
-      let secFive = document.querySelector('#section5 .inputboxx input')
-      let secSix = document.querySelectorAll('#section6 .checkbox input')
-      let secSeven = document.querySelector('#section7 .inputboxx input')
-      let secEight = document.querySelector('#section8 .inputboxx input')
-      let secNine = document.querySelector('#section9 .inputboxx input')
-      let secTen = document.querySelector('#section10 .inputboxx input')
-      let secEleven = document.querySelector('#section11 .inputboxx input')
-      let secTwelve = document.querySelectorAll('#section12 .checkbox input')
-      let secThirteen = document.querySelector("#section13 select")
-      let secFourteen = document.querySelector("#section14 select")
+      var arraysOfCheckBoxes = [1, 2, 6, 12];
+      var arraysOfSelects = [13, 14];
+      var arraysOfInputs = [3, 4, 5, 7, 8, 9, 10, 11];
+      var fieldLength = 14;
+      function queryHelper(no){
+        let builder;
+        no = parseInt(no);
+        if(arraysOfCheckBoxes.indexOf(no) != -1){
+          builder = `#section${no} .checkbox input`;
+          return document.querySelectorAll(builder);
+        }
+        else if(arraysOfInputs.indexOf(no) != -1){
+          builder = `#section${no} .inputboxx input`;
+        }
+        else if(arraysOfSelects.indexOf(no) != -1){
+          builder = `#section${no} select`;
+        }
+        console.log(builder)
+        return document.querySelector(builder);
+      }
      
-      function displaySubmit(s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14 ){
+      let secFourteen = document.querySelector("#section14 select")
+     let responses = {};
+     function arrayHelper(query, type){
+      switch (type) {
+              case 1:
+                Array.from(query).forEach(e => {
+                    if(e.checked)
+                    {
+                      isTrue = true;
+                    }
+                    
+                  })
+                  
+                break;
+              case 2:
+                if(query.value.length > 0){
+                  isTrue = true
+                }
+                break;
+            
+              default:
+              if(query.selectedIndex !== 0){
+                  isTrue = true;
+                }
+                break;
+            }
+          if(isTrue){
+              complete += 1;
+              isTrue = false;
+              
+            }
+      }
+      
+      function displaySubmit(){
+        //create an array to store numbers of specific fields;
+        //loop through all fields and pass type accordingly
         
                               complete = 0;
                               isTrue = false;
-                              //First section checker
-                              Array.from(s1).forEach(e => {
-                                if(e.checked)
-                                {
-                                  isTrue = true;
+                              for(m = 1; m <= fieldLength; m++){
+                                if(arraysOfCheckBoxes.indexOf(m) != -1){
+                                  arrayHelper(queryHelper(m), 1)
                                 }
-                                
-                              })
-                              if(isTrue){
-                                complete += 1;
-                                
-                                isTrue = false;
-                                
-                              }
-                              //Second section checker
-                              Array.from(s2).forEach(e => {
-                                if(e.checked){
-                                  isTrue = true
+                                else if(arraysOfInputs.indexOf(m) != -1){
+                                  arrayHelper(queryHelper(m), 2)
                                 }
-                              })
-                              if(isTrue){
-                                complete += 1;
-                                isTrue = false
+                                else if(arraysOfSelects.indexOf(m) != -1){
+                                  arrayHelper(queryHelper(m), 3)
+                                }
                               }
-                              //Third section checker
                               
-                                if(s3.value.length > 0){
-                                  isTrue = true
-                                }
-                             
-                              if(isTrue){
-                                complete += 1;
-                                isTrue = false
-                              }
-                              //Fourth section checker
-                              
-                                if(s4.value.length > 0){
-                                  isTrue = true
-                                }
-                             
-                              if(isTrue){
-                                complete += 1;
-                                isTrue = false
-                              }
-                              //Fifth section checker
-                              
-                                if(s5.value.length > 0){
-                                  isTrue = true
-                                }
-                             
-                              if(isTrue){
-                                complete += 1;
-                                isTrue = false
-                              }
-                              //Sixth section checker
-                              Array.from(s6).forEach(e => {
-                                if(e.checked)
-                                {
-                                  isTrue = true;
-                                }
-                                
-                              })
-                              if(isTrue){
-                                complete += 1;
-                                isTrue = false;
-                                
-                              }
-                               //Seventh section checker
-                              
-                                if(s7.value.length > 0){
-                                  isTrue = true
-                                }
-                              
-                              if(isTrue){
-                                complete += 1;
-                                isTrue = false
-                              }
-                               //Eight section checker
-                              
-                                if(s8.value.length > 0){
-                                  isTrue = true
-                                }
-                             
-                              if(isTrue){
-                                complete += 1;
-                                isTrue = false
-                              }
-                              //Ninth section checker
-                              
-                                if(s9.value.length > 0){
-                                  
-                                  isTrue = true
-                                }
-                             
-                              if(isTrue){
-                                complete += 1;
-                                isTrue = false
-                              }
-                              //Ten section checker
-                              
-                                if(s10.value.length > 0){
-                                  isTrue = true
-                                }
-                              
-                              if(isTrue){
-                                complete += 1;
-                                isTrue = false
-                              }
-                              //Eleventh section checker
-                              
-                              if(s11.value.length > 0){
-                                  isTrue = true
-                                }
-                              
-                              if(isTrue){
-                                complete += 1;
-                                isTrue = false
-                              }
-                              //Twelveth section checker
-                              Array.from(s12).forEach(e => {
-                                if(e.checked)
-                                {
-                                  isTrue = true;
-                                }
-                                
-                              })
-                              if(isTrue){
-                                complete += 1;
-                                isTrue = false
-                              }
-                              //Thirteenth section checker
-                              if(s13.selectedIndex !== 0){
-                                isTrue = true;
-                              }
-                              if(isTrue){
-                                complete += 1;
-                                isTrue = false
-                              }
-
-                               //Fourteenth section checker
-                               if(s14.selectedIndex !== 0){
-                                isTrue = true;
-                              }
-                              if(isTrue){
-                                complete += 1;
-                                isTrue = false
-                              }
 
                               switch (complete) {
         
@@ -597,8 +504,6 @@ html{
                               //Done checking
                               if(complete === 14)
                               {
-                                
-                                
                                 return true;
                               }
                              
@@ -606,94 +511,45 @@ html{
                             
                               
         }
-        displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
-                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
-      // switch (complete) {
-      //   case 0:
-      //     complete = 0
-      //     break;
-      //     case 1:
-      //     complete = 7.14285714286
-      //     break;
-      //     case 2:
-      //     complete = 14.2857142857
-      //     break;
-      //   default:
-      //     break;
-      // }      
+        displaySubmit()
+      
       let completion = document.querySelector('.progress .progress-bar')
-                    
-      Array.from(secOne).forEach(element => {
-        
-        element.addEventListener('click', function(e){
-          let checked = false;
-          let content = element.parentElement.querySelector('#section1 .checkbox label').textContent
-          element.value = content;
-          Array.from(secOne).forEach(e => {
-            if(e.checked)
-            {
-              checked = true;
-              
-            }
-            
-          });
-          if(checked)
-          {
-            nextBtn[0].classList.add('show-next')
-            nextBtn[0].classList.remove('hide-next')
-          }
-          else{
-            nextBtn[0].classList.add('hide-next')
-            nextBtn[0].classList.remove('show-next')
-          }
-          displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
-                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
+      function checkListener(sectionNumber){
 
-                                  
-     
-      completion.textContent = completed;  
-        })
-      }); 
-        
-      
-      Array.from(secTwo).forEach(element => {
-        
-        element.addEventListener('click', function(e){
-          let checked = false;
-          let content = element.parentElement.querySelector('#section2 .checkbox label').textContent
-          element.value = content;
-          Array.from(secTwo).forEach(e => {
-            if(e.checked)
-            {
-              checked = true;
+        sectionID = queryHelper(sectionNumber);
+        let btnID = nextBtn[sectionNumber - 1];
+            console.log(btnID)
+            let checked = false;
+            //let content = element.parentElement.querySelector('#section'+sectionNumber + ' .checkbox label').textContent
+            //element.value = content;
+            Array.from(sectionID).forEach(e => {
+              console.log(e)
+              if(e.checked)
+              {
+                console.log("I was checked")
+                checked = true;
+                
+              }
               
+            });
+            if(checked)
+            {
+              btnID.classList.add('show-next')
+              btnID.classList.remove('hide-next')
             }
-          });
-          if(checked)
-          {
-
-            nextBtn[1].classList.add('show-next')
-            nextBtn[1].classList.remove('hide-next')
-          }
-          else{
-            nextBtn[1].classList.add('hide-next')
-            nextBtn[1].classList.remove('show-next')
-          }
-          displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
-                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
-                            
-      completion.textContent = completed; 
-      
-        })
-      }); 
-      
-   
-        
-        secThree.addEventListener('keyup', function(e){
+            else{
+              btnID.classList.add('hide-next')
+              btnID.classList.remove('show-next')
+            }
+            displaySubmit()
+            completion.textContent = completed;
+      }
+      function inputListerner(sectionNumber){
+        sectionID = queryHelper(sectionNumber);
+        let btnID = nextBtn[sectionNumber - 1];
           let keypress = false;
-          let content = secThree.value
-          console.log(e)
-          if(secThree.value.length > 0)
+          let content = sectionID.value
+          if(sectionID.value.length > 0)
           {
             keypress = true;
           }
@@ -702,263 +558,85 @@ html{
           }
             
           if(keypress){
-            nextBtn[2].classList.add('show-next')
-            nextBtn[2].classList.remove('hide-next')
-            console.log(keypress)
+            btnID.classList.add('show-next')
+            btnID.classList.remove('hide-next')
           }
           else{
-            nextBtn[2].classList.add('hide-next')
-            nextBtn[2].classList.remove('show-next')
+            btnID.classList.add('hide-next')
+            btnID.classList.remove('show-next')
           }
-          displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
-                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
+          displaySubmit()
                             
-      completion.textContent = completed; 
-      })
+      completion.textContent = completed;
+      }
+      function checkbox(sectionNumber){
+          sectionID = queryHelper(sectionNumber);
+          console.log(sectionID)
+          Array.from(sectionID).forEach(element => {
+              console.log(element)
+              element.setAttribute('onclick', `checkListener(${sectionNumber})`)
+              
+          }); 
 
-        
-        secFour.addEventListener('keyup', function(e){
-          let keypress = false;
-          let content = secFour.value
-          console.log(e)
-          if(secFour.value.length > 0)
-          {
-            
-            keypress = true;
-            nextBtn[3].classList.add('show-next')
-            nextBtn[3].classList.remove('hide-next')
-            console.log(keypress)
-          }
-          else{
-            nextBtn[3].classList.add('hide-next')
-            nextBtn[3].classList.remove('show-next')
-          }
-          displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
-                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
-                           
-      completion.textContent = completed; 
-      })
 
-        
-        secFive.addEventListener('keyup', function(e){
-          let keypress = false;
-          let content = secThree.value
-          console.log(e)
-          if(secFive.value.length > 0)
-          {
-            
-            keypress = true;
-            nextBtn[4].classList.add('show-next')
-            nextBtn[4].classList.remove('hide-next')
-            console.log(keypress)
-          }
-          else{
-            nextBtn[4].classList.add('hide-next')
-            nextBtn[4].classList.remove('show-next')
-          }
-          displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
-                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
-                           
-      completion.textContent = completed; 
-      })
 
-      
-      Array.from(secSix).forEach(element => {
-        
-        element.addEventListener('click', function(e){
-          let checked = false;
-          let content = element.parentElement.querySelector('#section6 .checkbox label').textContent
-          element.value = content;
-          Array.from(secSix).forEach(e => {
-            if(e.checked)
-            {
-              checked = true;
-            }
-          });
-          if(checked)
-          {
-            nextBtn[5].classList.add('show-next')
-            nextBtn[5].classList.remove('hide-next')
-          }
-          else{
-            nextBtn[5].classList.add('hide-next')
-            nextBtn[5].classList.remove('show-next')
-          }
-          displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
-                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
-                            
-      completion.textContent = completed; 
-          
-        })
-      }); 
-      
-   
-
-        
-        secSeven.addEventListener('keyup', function(e){
-          let keypress = false;
-          let content = secSeven.value
-          console.log(e)
-          if(secSeven.value.length > 0)
-          {
-            
-            keypress = true;
-            nextBtn[6].classList.add('show-next')
-            nextBtn[6].classList.remove('hide-next')
-            console.log(keypress)
-          }
-          else{
-            nextBtn[6].classList.add('hide-next')
-            nextBtn[6].classList.remove('show-next')
-          }
-          displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
-                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
-                            
-      completion.textContent = completed; 
-      })
-
-      
-        
-        secEight.addEventListener('keyup', function(e){
-          let keypress = false;
-          let content = secThree.value
-          console.log(e)
-          if(secEight.value.length > 0)
-          {
-            
-            keypress = true;
-            nextBtn[7].classList.add('show-next')
-            nextBtn[7].classList.remove('hide-next')
-            
-          }
-          else{
-            nextBtn[7].classList.add('hide-next')
-            nextBtn[7].classList.remove('show-next')
-          }
-          displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
-                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
-                           
-      completion.textContent = completed; 
-      })
-      
-        
-        secNine.addEventListener('keyup', function(e){
-          let keypress = false;
-          let content = secThree.value
-          console.log(e)
-          if(secNine.value.length > 0)
-          {
-            
-            keypress = true;
-            nextBtn[8].classList.add('show-next')
-            nextBtn[8].classList.remove('hide-next')
-            
-          
-          }
-          else{
-            nextBtn[8].classList.add('hide-next')
-            nextBtn[8].classList.remove('show-next')
-          }
-          displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
-                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
-                            
-      completion.textContent = completed; 
-      })
-      
-        
-        secTen.addEventListener('keyup', function(e){
-          let keypress = false;
-          let content = secTen.value
-          console.log(e)
-          if(secTen.value.length > 0)
-          {
-            
-            keypress = true;
-            nextBtn[9].classList.add('show-next')
-            nextBtn[9].classList.remove('hide-next')
-            
-          }
-          else{
-            nextBtn[9].classList.add('hide-next')
-            nextBtn[9].classList.remove('show-next')
-          }
-          displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
-                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
-                           
-      completion.textContent = completed; 
-      })
-      
-        
-        secEleven.addEventListener('keyup', function(e){
-          let keypress = false;
-          let content = secEleven.value
-          console.log(e)
-          if(secEleven.value.length > 0)
-          {
-            
-            keypress = true;
-            nextBtn[10].classList.add('show-next')
-            nextBtn[10].classList.remove('hide-next')
-            
-          }
-          else{
-            nextBtn[10].classList.add('hide-next')
-            nextBtn[10].classList.remove('show-next')
-          }
-          displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
-                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
-                            
-      completion.textContent = completed; 
-      })
-      
-      
-      Array.from(secTwelve).forEach(element => {
-        
-        element.addEventListener('click', function(e){
-          let checked = false;
-          let content = element.parentElement.querySelector('#section12 .checkbox label').textContent
-          element.value = content;
-          Array.from(secTwelve).forEach(e => {
-            if(e.checked)
-            {
-              checked = true;
-            }
-          });
-          if(checked)
-          {
-            nextBtn[11].classList.add('show-next')
-            nextBtn[11].classList.remove('hide-next')
-          }
-          else{
-            nextBtn[11].classList.add('hide-next')
-            nextBtn[11].classList.remove('show-next')
-          }
-          displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
-                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
-              completion.textContent = completed; 
-        })
+        }  
        
-      }); 
+      
+      function inputfield(sectionNumber){
+        sectionID = queryHelper(sectionNumber);
+        console.log(sectionNumber)
+        sectionID.setAttribute("onkeyup", `inputListerner(${sectionNumber})`);
+        
+      }
+      checkbox(1);  
+      checkbox(2);
+      inputfield(3)
+      inputfield(4);
+      inputfield(5);
+      checkbox(6);
+      inputfield(7);
+      inputfield(8);
+      inputfield(9);
+      inputfield(10);
+      inputfield(11);
+      checkbox(12);
+      optionSelect(13);
+
+
+
+      function selectListener(sectionNumber){
+        let btnID = nextBtn[sectionNumber -1];  
+        sectionID = queryHelper(sectionNumber);
+          let selected = false;
+          if(sectionID.value != 0){
+            selected = true;
+          }
+
+          else{
+            selected = false;
+          }
+          if(selected){
+              btnID.classList.add('show-next')
+              btnID.classList.remove('hide-next')
+              console.log(this.value)
+            }
+            else{
+              btnID.classList.add('hide-next')
+              btnID.classList.remove('show-next')
+            }
+            displaySubmit()
+            completion.textContent = completed;
+      }
+      function optionSelect(sectionNumber){
+        sectionID = queryHelper(sectionNumber);
+        sectionID.setAttribute("onchange", `selectListener(${sectionNumber})`)
+        
+      }
+
 
       
-      secThirteen.addEventListener('change', function(e){
-        let selected = false;
-        if(this.value != null){
-          selected = true;
-        }
-        if(selected){
-            nextBtn[12].classList.add('show-next')
-            nextBtn[12].classList.remove('hide-next')
-            console.log(this.value)
-          }
-          else{
-            nextBtn[12].classList.add('hide-next')
-            nextBtn[12].classList.remove('show-next')
-          }
-          displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
-                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
-          completion.textContent = completed;                   
-      })
+      
 
       secFourteen.addEventListener('change', function(e){
         let selected = false;
@@ -966,36 +644,13 @@ html{
           selected = true;
         }
         
-          displaySubmit(secOne, secTwo, secThree, secFour, secFive, secSix, secSeven,
-                            secEight, secNine, secTen, secEleven, secTwelve, secThirteen, secFourteen)
+          displaySubmit()
           completion.textContent = completed;                   
       })
       
-  </script>
-
-  <script>
-      var opt = document.getElementById('profSelect')
-       function toggle(e){
-        var optInput = document.querySelector('#profSelect input')
-        
-        if(optInput.checked != false){
-            console.log(optInput);
-           
-            optInput.setAttribute('checked', false)
-        }
-        else if(optInput.checked != true){
-            console.log(optInput);
-            optInput.setAttribute('checked', true)
-            
-        }
-        
-      }
-     
-</script>
-  
-<script>
-let alp = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', '0', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y','Z']
-</script>  
+  </script> -->
+  <script src="./js/pie6k.js"></script>
+ <script src="./js/typeform.js"></script>
    
 </body>
 
@@ -1010,56 +665,63 @@ let alp = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
     scrolled = true;   
       navbar.classList.add('colored_nav')
       navbar.classList.remove('transparent_nav')
-      
+      for(n = 1; n < fieldLength; n++){
+        var id = `#section${n}`;
+        console.log(id)
+        if($(`${id}`).is(":inview")){
+          formSection.innerHTML = document.querySelector(`${id} .descHeading`).innerHTML;
+          break;
+        }
+      }
      
-      let yscroll = document.documentElement.scrollTop;
-      let y = Number(yscroll)
-      console.log(yscroll)
+      // let yscroll = document.documentElement.scrollTop;
+      // let y = Number(yscroll)
+      // // console.log(yscroll)
       
-      if (yscroll > 100 && yscroll < 470) {
-        formSection.innerHTML = document.querySelector("#section1 .descHeading").innerHTML
-      }
-      else if(yscroll > 469 && yscroll < 580){
-        formSection.innerHTML = document.querySelector("#section2 .descHeading").innerHTML;
-      }
-      else if(yscroll > 690 && yscroll < 880){
-        formSection.innerHTML = document.querySelector("#section3 .descHeading").innerHTML;
-      }
-      else if(yscroll > 881 && yscroll < 1250){
-        formSection.innerHTML = document.querySelector("#section4 .descHeading").innerHTML;
-      }
-      else if(yscroll > 1251 && yscroll < 1400){
-        formSection.innerHTML = document.querySelector("#section5 .descHeading").innerHTML;
-      }
-      else if(yscroll > 1549 && yscroll < 1950){
-        formSection.innerHTML = document.querySelector("#section6 .descHeading").innerHTML;
-      }
-      else if(yscroll > 1999 && yscroll < 2330){
-        formSection.innerHTML = document.querySelector("#section7 .descHeading").innerHTML;
-      }
-      else if(yscroll > 2329 && yscroll < 2600){
-        formSection.innerHTML = document.querySelector("#section8 .descHeading").innerHTML;
-      }
-      else if(yscroll > 2599 && yscroll < 2930){
-        formSection.innerHTML = document.querySelector("#section9 .descHeading").innerHTML;
-      }
-      else if(yscroll > 2929 && yscroll < 3300){
-        formSection.innerHTML = document.querySelector("#section10 .descHeading").innerHTML;
-      }
-      else if(yscroll > 3299 && yscroll < 3600){
-        formSection.innerHTML = document.querySelector("#section11 .descHeading").innerHTML;
-      }
-      else if(yscroll > 3599 && yscroll < 3900){
-        formSection.innerHTML = document.querySelector("#section12 .descHeading").innerHTML;
-      }
-      else if(yscroll > 3889 && yscroll < 4209){
-        formSection.innerHTML = document.querySelector("#section13 .descHeading").innerHTML;
-      }
-      else if(yscroll > 4210){
-        formSection.innerHTML = document.querySelector("#section14 .descHeading").innerHTML;
-      } else {
+      // if (yscroll > 100 && yscroll < 470) {
+      //   formSection.innerHTML = document.querySelector("#section1 .descHeading").innerHTML
+      // }
+      // else if(yscroll > 469 && yscroll < 580){
+      //   formSection.innerHTML = document.querySelector("#section2 .descHeading").innerHTML;
+      // }
+      // else if(yscroll > 690 && yscroll < 880){
+      //   formSection.innerHTML = document.querySelector("#section3 .descHeading").innerHTML;
+      // }
+      // else if(yscroll > 881 && yscroll < 1250){
+      //   formSection.innerHTML = document.querySelector("#section4 .descHeading").innerHTML;
+      // }
+      // else if(yscroll > 1251 && yscroll < 1400){
+      //   formSection.innerHTML = document.querySelector("#section5 .descHeading").innerHTML;
+      // }
+      // else if(yscroll > 1549 && yscroll < 1950){
+      //   formSection.innerHTML = document.querySelector("#section6 .descHeading").innerHTML;
+      // }
+      // else if(yscroll > 1999 && yscroll < 2330){
+      //   formSection.innerHTML = document.querySelector("#section7 .descHeading").innerHTML;
+      // }
+      // else if(yscroll > 2329 && yscroll < 2600){
+      //   formSection.innerHTML = document.querySelector("#section8 .descHeading").innerHTML;
+      // }
+      // else if(yscroll > 2599 && yscroll < 2930){
+      //   formSection.innerHTML = document.querySelector("#section9 .descHeading").innerHTML;
+      // }
+      // else if(yscroll > 2929 && yscroll < 3300){
+      //   formSection.innerHTML = document.querySelector("#section10 .descHeading").innerHTML;
+      // }
+      // else if(yscroll > 3299 && yscroll < 3600){
+      //   formSection.innerHTML = document.querySelector("#section11 .descHeading").innerHTML;
+      // }
+      // else if(yscroll > 3599 && yscroll < 3900){
+      //   formSection.innerHTML = document.querySelector("#section12 .descHeading").innerHTML;
+      // }
+      // else if(yscroll > 3889 && yscroll < 4209){
+      //   formSection.innerHTML = document.querySelector("#section13 .descHeading").innerHTML;
+      // }
+      // else if(yscroll > 4210){
+      //   formSection.innerHTML = document.querySelector("#section14 .descHeading").innerHTML;
+      // } else {
         
-      }
+      // }
      
   }
   if(scrolled){
@@ -1073,4 +735,4 @@ let alp = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
 
 
 <script src="storage.js"></script>
-</html>
+<</html>
