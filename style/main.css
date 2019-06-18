@@ -2464,4 +2464,24 @@ footer.typeform{
     opacity: 0.5;
 }
 
+.modal-body label {
+    color: #173245 !important;
+    font-size: 15px
+}
+.modal-footer button{
+    background: #163245 !important;
+    border-radius: 4px !important;
+    padding: 0.5em 1.2em;
+}
+.modal-body .form-group{
+    padding-top: 5% !important;
+}
+
+#typeForm .modal-header{
+    background: #163245 !important;
+}
+
+#typeForm .modal-header h5{
+    font-size: 17px !important
+}
 /** end of typeform **/
