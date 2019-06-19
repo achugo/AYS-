@@ -387,6 +387,7 @@
 
 <script>
   const navbar = document.getElementById("navAYS")
+  navbar.classList.add('colored_nav');
   const navform = document.getElementById("nav_search")
   const navauth = document.getElementById("auth")
   window.onscroll = function(){
@@ -403,7 +404,7 @@
     
     else {
       navbar.classList.add('transparent_nav')
-    //   navbar.classList.remove('colored_nav')
+    // navbar.classList.remove('colored_nav')
       navform.classList.remove('disp')
       navform.classList.add('hide')
       navauth.classList.remove('hide') 
